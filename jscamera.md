@@ -29,7 +29,7 @@ let tilt = camera.getTilt();
 > 카메라의 Tilt를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _tilt | double | 입력 카메라 Tilt
@@ -75,7 +75,7 @@ let direct = camera.getDirect();
 > 카메라의 방향 각도를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _direct | double | 입력 카메라 방향 각도
@@ -116,7 +116,7 @@ let alt = camera.getAltitude();
 > 카메라의 고도를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _alt | double | 입력 카메라 고도
@@ -157,7 +157,7 @@ let fov = camera.getFov();
 > 카메라의 FOV를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _fov | double | 입력 카메라 FOV
@@ -201,7 +201,7 @@ console.log(position.Altitude);		// 고도
 > 카메라의 위치를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _position | CJSVector3D | 입력 카메라 위치
@@ -244,7 +244,7 @@ let mode = camera.getMoveMode();
 > 카메라의 회전모드를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _mode | bool | 카메라 회전모드
@@ -286,7 +286,7 @@ let distance = camera.getDistance();
 > 카메라의 시점 ~ 위치 거리를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _distance | double | 시점 ~ 위치 거리 (m 단위)
@@ -326,7 +326,7 @@ let tilt = camera.getLimitTilt();
 > 카메라의 시점 ~ 위치 거리를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _tilt | double | 제한할 최소 Tilt
@@ -366,7 +366,7 @@ let alt = camera.getLimitAltitude();
 > 카메라의 제한된 최소 고도값을 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _alt | double | 제한할 최소 고도
@@ -406,14 +406,15 @@ let speed = camera.getAnimationSpeed();
 > 마우스에 의한 카메라의 이동 속도를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _speed | double | 이동 속도
-{% endtab %}
 * Parameter 정보
   * 1.0 ~ 10.0 사이 값으로 설정 가능
   * 값이 클 수록 속도가 빨라집니다.
+{% endtab %}
+
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
@@ -448,14 +449,15 @@ let speed = camera.getCameraSpeed();
 > API에 의한 카메라의 이동 속도를 설정합니다.
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | _speed | int | 이동 속도
-{% endtab %}
 * Parameter 정보
   * 1 ~ 10 사이 값으로 설정 가능
   * 값이 클 수록 속도가 빨라집니다.
+{% endtab %}
+
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
