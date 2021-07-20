@@ -6,22 +6,40 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 
 ## getTilt\(\)
 
-> 해당 레이어 오브젝트 추
+> 카메라의 현재 Tilt를 반환합니다.
 
 {% tabs %}
 {% tab title="Return" %}
-| Return | Type | Contents |
-| :--- | :--- | :--- |
-|  | double | 카메라의 현재 Tilt를 반환합니다. |
+| Type | Contents |
+| :--- | :--- |
+| double | 카메라의 현재 Tilt
 
-* 반환 정
-  * 없
 {% endtab %}
 
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
 let tilt = camera.getTilt();
+```
+{% endtab %}
+{% endtabs %}
+
+## getDirect\(\)
+
+> 카메라가 현재 바라보는 각도를 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| double | 카메라의 방향 각도
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let tilt = camera.getDirect();
 ```
 {% endtab %}
 {% endtabs %}
