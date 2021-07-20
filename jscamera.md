@@ -32,7 +32,7 @@ let tilt = camera.getTilt();
 {% tab title="Return" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| _tilt | double | 카메라 Tilt
+| _tilt | double | 입력 카메라 Tilt
 
 {% endtab %}
 
@@ -70,6 +70,27 @@ let direct = camera.getDirect();
 {% endtab %}
 {% endtabs %}
 
+## setDirect\(double \_direct\)
+
+> 카메라의 방향 각도를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _direct | double | 입력 카메라 방향 각도
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let direct = 45;
+camera.setDirect(direct);
+```
+{% endtab %}
+{% endtabs %}
+
 ## getAltitude\(\)
 
 > 카메라의 고도를 반환합니다.
@@ -86,6 +107,27 @@ let direct = camera.getDirect();
 ```javascript
 let camera= Module.getViewCamera();
 let alt = camera.getAltitude();
+```
+{% endtab %}
+{% endtabs %}
+
+## setAltitude\(double \_alt\)
+
+> 카메라의 고도를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _alt | double | 입력 카메라 고도
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let alt = 2000;
+camera.setAltitude(alt);
 ```
 {% endtab %}
 {% endtabs %}
@@ -110,25 +152,23 @@ let fov = camera.getFov();
 {% endtab %}
 {% endtabs %}
 
-## getCenterPoint\(\)
+## setFov\(double \_fov\)
 
-> 화면 중심의 지도 좌표를 반환합니다.
+> 카메라의 FOV를 설정합니다.
 
 {% tabs %}
 {% tab title="Return" %}
-| Type | Contents |
-| :--- | :--- |
-| CJSVector3D | 화면 중심의 지도 좌표
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _fov | double | 입력 카메라 FOV
 
 {% endtab %}
 
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
-let center = camera.getCenterPoint();
-console.log(center.Longitude);		// 경도
-console.log(center.Latitude);		// 위도
-console.log(center.Altitude);		// 고도
+let fov = 2000;
+camera.setFov(fov);
 ```
 {% endtab %}
 {% endtabs %}
@@ -156,32 +196,46 @@ console.log(position.Altitude);		// 고도
 {% endtab %}
 {% endtabs %}
 
-## removeAtIndex\(number \_index\)
+## setLocation\(CJSVector3D \_position\)
 
-> 레이어 오브젝트 리스트에서 인덱스 번호에 해당되는 오브젝트 삭제
+> 카메라의 위치를 설정합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Return" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_index | number | 삭제 오브젝트 인덱 |
+| _position | CJSVector3D | 입력 카메라 위치
 
-* 반환 정보
-  * boolean
-    * TRUE : 오브젝트 삭제 성공
-    * FALSE : 오브젝트 삭제 실패
 {% endtab %}
 
 {% tab title="Code" %}
 ```javascript
-let layername = "objectlayer"
-let layerList = new Module.JSLayerList(true);
-let    layerList.createLayer(layername );
+let camera= Module.getViewCamera();
+let position = new Module.JSVector3D(126.92836647767662, 37.52439503321471, 1000.0);
+camera.setLocation(position);
+```
+{% endtab %}
+{% endtabs %}
 
-// object 생성 과정
+## getCenterPoint\(\)
 
-layer.addObject(object, 0);
-layer.removeAtIndex(0);
+> 화면 중심의 지도 좌표를 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| CJSVector3D | 화면 중심의 지도 좌표
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let center = camera.getCenterPoint();
+console.log(center.Longitude);		// 경도
+console.log(center.Latitude);		// 위도
+console.log(center.Altitude);		// 고도
 ```
 {% endtab %}
 {% endtabs %}
