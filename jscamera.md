@@ -39,7 +39,7 @@ let tilt = camera.getTilt();
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
-let tilt = 45;
+let tilt = 45.0;
 camera.setTilt(tilt);
 ```
 {% endtab %}
@@ -85,7 +85,7 @@ let direct = camera.getDirect();
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
-let direct = 45;
+let direct = 45.0;
 camera.setDirect(direct);
 ```
 {% endtab %}
@@ -126,7 +126,7 @@ let alt = camera.getAltitude();
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
-let alt = 2000;
+let alt = 2000.0;
 camera.setAltitude(alt);
 ```
 {% endtab %}
@@ -167,7 +167,7 @@ let fov = camera.getFov();
 {% tab title="Code" %}
 ```javascript
 let camera= Module.getViewCamera();
-let fov = 2000;
+let fov = 2000.0;
 camera.setFov(fov);
 ```
 {% endtab %}
@@ -213,6 +213,254 @@ console.log(position.Altitude);		// 고도
 let camera= Module.getViewCamera();
 let position = new Module.JSVector3D(126.92836647767662, 37.52439503321471, 1000.0);
 camera.setLocation(position);
+```
+{% endtab %}
+{% endtabs %}
+
+## getMoveMode\(\)
+
+> 카메라의 회전모드를 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| bool | 카메라 회전모드
+* 반환 정보
+  * true : 1인칭 시점 회전
+  * false : 3인칭 시점 회전
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let mode = camera.getMoveMode();
+```
+{% endtab %}
+{% endtabs %}
+
+## setMoveMode\(bool \_mode\)
+
+> 카메라의 회전모드를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _mode | bool | 카메라 회전모드
+* Parameter 정보
+  * true : 1인칭 시점 회전
+  * false : 3인칭 시점 회전
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+camera.setMoveMode(false);
+```
+{% endtab %}
+{% endtabs %}
+
+## getDistance\(\)
+
+> 카메라의 시점 ~ 위치 거리를 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| double | 시점 ~ 위치 거리(m 단위)
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let distance = camera.getDistance();
+```
+{% endtab %}
+{% endtabs %}
+
+## setDistance\(double \_distance\)
+
+> 카메라의 시점 ~ 위치 거리를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _distance | double | 시점 ~ 위치 거리 (m 단위)
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let distance = 2000.0;
+camera.setDistance(distance);
+```
+{% endtab %}
+{% endtabs %}
+
+## getLimitTilt\(\)
+
+> 카메라의 제한된 최소 Tilt값을 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| double | 제한된 최소 Tilt
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let tilt = camera.getLimitTilt();
+```
+{% endtab %}
+{% endtabs %}
+
+## setLimitTilt\(double \_tilt\)
+
+> 카메라의 시점 ~ 위치 거리를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _tilt | double | 제한할 최소 Tilt
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let tilt = 30.0;
+camera.setLimitTilt(tilt);
+```
+{% endtab %}
+{% endtabs %}
+
+## getLimitAltitude\(\)
+
+> 카메라의 제한된 최소 고도값을 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| double | 제한된 최소 고도
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let alt = camera.getLimitAltitude();
+```
+{% endtab %}
+{% endtabs %}
+
+## setLimitAltitude\(double \_alt\)
+
+> 카메라의 제한된 최소 고도값을 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _alt | double | 제한할 최소 고도
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let alt = 3000.0;
+camera.setLimitAltitude(alt);
+```
+{% endtab %}
+{% endtabs %}
+
+## getAnimationSpeed\(\)
+
+> 마우스에 의한 카메라의 이동 속도를 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| double | 이동 속도
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let speed = camera.getAnimationSpeed();
+```
+{% endtab %}
+{% endtabs %}
+
+## setAnimationSpeed\(double \_speed\)
+
+> 마우스에 의한 카메라의 이동 속도를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _speed | double | 이동 속도
+{% endtab %}
+* Parameter 정보
+  * 1.0 ~ 10.0 사이 값으로 설정 가능
+  * 값이 클 수록 속도가 빨라집니다.
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let speed = 5.0;
+camera.setAnimationSpeed(speed);
+```
+{% endtab %}
+{% endtabs %}
+
+## getCameraSpeed\(\)
+
+> API에 의한 카메라의 이동 속도를 반환합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Type | Contents |
+| :--- | :--- |
+| int | 이동 속도
+
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let speed = camera.getCameraSpeed();
+```
+{% endtab %}
+{% endtabs %}
+
+## setCameraSpeed\(double \_speed\)
+
+> API에 의한 카메라의 이동 속도를 설정합니다.
+
+{% tabs %}
+{% tab title="Return" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| _speed | int | 이동 속도
+{% endtab %}
+* Parameter 정보
+  * 1 ~ 10 사이 값으로 설정 가능
+  * 값이 클 수록 속도가 빨라집니다.
+{% tab title="Code" %}
+```javascript
+let camera= Module.getViewCamera();
+let speed = 5.0;
+camera.setCameraSpeed(speed);
 ```
 {% endtab %}
 {% endtabs %}
