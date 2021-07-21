@@ -6,13 +6,13 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 
 ## getTilt\(\)
 
-> 카메라 현재 Tilt 반환
+> 카메라 Tilt 반환
 
 {% tabs %}
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-    * 카메라의 현재 Tilt 반환.
+    * 카메라 현재 Tilt 반환.
 {% endtab %}
 
 {% tab title="Code" %}
@@ -31,7 +31,7 @@ let tilt = camera.getTilt();
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_tilt | number | 설정할 Tilt  |
+| \_tilt | number | 설정할 Tilt값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -45,13 +45,13 @@ camera.setTilt(tilt);
 
 ## getDirect\(\)
 
-> 카메라의 방향 각도 반환
+> 카메라 방향 각도 반환
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| number | 카메라가 바라보는 방 각도 |
+| number | 카메라가 바라보는 방향 각도 |
 
 * 반환 정보
   * 0도 : 북쪽
@@ -71,13 +71,13 @@ let direct = camera.getDirect();
 
 ## setDirect\(number \_direct\)
 
-> 카메라의 방향 각도 설정
+> 카메라 방향 각도 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_direct | number | 설정할 카메라 방향 각도  |
+| \_direct | number | 설정할 카메라 방향 각도값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -91,13 +91,13 @@ camera.setDirect(direct);
 
 ## getAltitude\(\)
 
-> 카메라의 고도를 반환합니다.
+> 카메라 고도 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| double | 카메라의 고도 |
+| number | 카메라 고도 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -108,15 +108,15 @@ let alt = camera.getAltitude();
 {% endtab %}
 {% endtabs %}
 
-## setAltitude\(double \_alt\)
+## setAltitude\(number \_alt\)
 
-> 카메라의 고도를 설정합니다.
+> 카메라 고도 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_alt | double | 입력 카메라 고도 |
+| \_alt | number | 설정할 카메라 고도값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -130,13 +130,13 @@ camera.setAltitude(alt);
 
 ## getFov\(\)
 
-> 카메라의 FOV 각도를 반환합니다.
+> 카메라 FOV 각도 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| double | 카메라의 FOV |
+| number | 카메라 FOV |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -147,15 +147,15 @@ let fov = camera.getFov();
 {% endtab %}
 {% endtabs %}
 
-## setFov\(double \_fov\)
+## setFov\(number \_fov\)
 
-> 카메라의 FOV를 설정합니다.
+> 카메라 FOV 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_fov | double | 입력 카메라 FOV |
+| \_fov | number | 설정할 카메라 FOV값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -169,10 +169,10 @@ camera.setFov(fov);
 
 ## getLocation\(\)
 
-> 카메라의 위치를 반환합니다.
+> 카메라 위치 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
 | CJSVector3D | 카메라 위치 |
@@ -191,13 +191,13 @@ console.log(position.Altitude);        // 고도
 
 ## setLocation\(CJSVector3D \_position\)
 
-> 카메라의 위치를 설정합니다.
+> 카메라 위치 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_position | CJSVector3D | 입력 카메라 위치 |
+| \_position | CJSVector3D | 설정할 카메라 위치값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -211,13 +211,13 @@ camera.setLocation(position);
 
 ## getMoveMode\(\)
 
-> 카메라의 회전모드를 반환합니다.
+> 카메라 회전모드 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| bool | 카메라 회전모드 |
+| boolean | 카메라 회전모드 |
 
 * 반환 정보
   * true : 1인칭 시점 회전
@@ -232,15 +232,15 @@ let mode = camera.getMoveMode();
 {% endtab %}
 {% endtabs %}
 
-## setMoveMode\(bool \_mode\)
+## setMoveMode\(boolean \_mode\)
 
-> 카메라의 회전모드를 설정합니다.
+> 카메라 회전모드 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_mode | bool | 카메라 회전모드 |
+| \_mode | boolean | 설정할 카메라 회전모드값 |
 
 * Parameter 정보
   * true : 1인칭 시점 회전
@@ -257,13 +257,13 @@ camera.setMoveMode(false);
 
 ## getDistance\(\)
 
-> 카메라의 시점 ~ 위치 거리를 반환합니다.
+> 카메라 시점 ~ 위치 거리 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| double | 시점 ~ 위치 거리\(m 단위\) |
+| number | 시점 ~ 위치 거리\(m 단위\) |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -274,15 +274,15 @@ let distance = camera.getDistance();
 {% endtab %}
 {% endtabs %}
 
-## setDistance\(double \_distance\)
+## setDistance\(number \_distance\)
 
-> 카메라의 시점 ~ 위치 거리를 설정합니다.
+> 카메라 시점 ~ 위치 거리 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_distance | double | 시점 ~ 위치 거리 \(m 단위\) |
+| \_distance | number | 시점 ~ 위치 거리 \(m 단위\) |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -296,13 +296,13 @@ camera.setDistance(distance);
 
 ## getLimitTilt\(\)
 
-> 카메라의 제한된 최소 Tilt값을 반환합니다.
+> 카메라 제한된 최소 Tilt값 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| double | 제한된 최소 Tilt |
+| number | 제한된 최소 Tilt |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -313,15 +313,15 @@ let tilt = camera.getLimitTilt();
 {% endtab %}
 {% endtabs %}
 
-## setLimitTilt\(double \_tilt\)
+## setLimitTilt\(number \_tilt\)
 
-> 카메라의 시점 ~ 위치 거리를 설정합니다.
+> 카메라 제한할 최소 Tilt 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_tilt | double | 제한할 최소 Tilt |
+| \_tilt | number | 제한할 최소 Tilt값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -335,13 +335,13 @@ camera.setLimitTilt(tilt);
 
 ## getLimitAltitude\(\)
 
-> 카메라의 제한된 최소 고도값을 반환합니다.
+> 카메라 제한된 최소 고도값 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| double | 제한된 최소 고도 |
+| number | 제한된 최소 고도값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -352,15 +352,15 @@ let alt = camera.getLimitAltitude();
 {% endtab %}
 {% endtabs %}
 
-## setLimitAltitude\(double \_alt\)
+## setLimitAltitude\(number \_alt\)
 
-> 카메라의 제한된 최소 고도값을 설정합니다.
+> 카메라 제한할 최소 고도값 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_alt | double | 제한할 최소 고도 |
+| \_alt | number | 제한할 최소 고도값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -374,13 +374,13 @@ camera.setLimitAltitude(alt);
 
 ## getAnimationSpeed\(\)
 
-> 마우스에 의한 카메라의 이동 속도를 반환합니다.
+> 마우스에 의한 카메라 이동 속도 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| double | 이동 속도 |
+| number | 이동 속도 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -391,15 +391,15 @@ let speed = camera.getAnimationSpeed();
 {% endtab %}
 {% endtabs %}
 
-## setAnimationSpeed\(double \_speed\)
+## setAnimationSpeed\(number \_speed\)
 
-> 마우스에 의한 카메라의 이동 속도를 설정합니다.
+> 마우스에 의한 카메라 이동 속도 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_speed | double | 이동 속도 |
+| \_speed | number | 이동 속도 |
 
 * Parameter 정보
   * 1.0 ~ 10.0 사이 값으로 설정 가능
@@ -417,13 +417,13 @@ camera.setAnimationSpeed(speed);
 
 ## getCameraSpeed\(\)
 
-> API에 의한 카메라의 이동 속도를 반환합니다.
+> API에 의한 카메라 이동 속도 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| int | 이동 속도 |
+| number | 이동 속도 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -434,15 +434,15 @@ let speed = camera.getCameraSpeed();
 {% endtab %}
 {% endtabs %}
 
-## setCameraSpeed\(double \_speed\)
+## setCameraSpeed\(number \_speed\)
 
-> API에 의한 카메라의 이동 속도를 설정합니다.
+> API에 의한 카메라 이동 속도 설정
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_speed | int | 이동 속도 |
+| \_speed | number | 이동 속도 |
 
 * Parameter 정보
   * 1 ~ 10 사이 값으로 설정 가능
@@ -460,13 +460,13 @@ camera.setCameraSpeed(speed);
 
 ## getCenterPoint\(\)
 
-> 화면 중심의 지도 좌표를 반환합니다.
+> 화면 중심의 지도 좌표 반환
 
 {% tabs %}
-{% tab title="Return" %}
+{% tab title="Parameter" %}
 | Type | Contents |
 | :--- | :--- |
-| CJSVector3D | 화면 중심의 지도 좌표 |
+| CJSVector3D | 화면 중심의 지도 좌표값 |
 {% endtab %}
 
 {% tab title="Code" %}
