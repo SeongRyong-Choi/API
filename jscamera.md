@@ -12,7 +12,7 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-    * 카메라 현재 Tilt 반환.
+    * 카메라 현재 Tilt 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -49,16 +49,13 @@ camera.setTilt(tilt);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 카메라가 바라보는 방향 각도 |
-
 * 반환 정보
-  * 0도 : 북쪽
-  * 90도 : 동쪽
-  * 180도 : 남쪽
-  * -180도 : 남쪽
-  * -90도 : 서쪽
+  * number Type
+	* 0도 : 북쪽
+	* 90도 : 동쪽
+	* 180도 : 남쪽
+	* -180도 : 남쪽
+	* -90도 : 서쪽
 {% endtab %}
 
 {% tab title="Code" %}
@@ -95,9 +92,9 @@ camera.setDirect(direct);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 카메라 고도 |
+* 반환 정보
+  * number Type
+    * 카메라 현재 고도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -134,9 +131,9 @@ camera.setAltitude(alt);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 카메라 FOV |
+* 반환 정보
+  * number Type
+    * 카메라 현재 FOV 각도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -173,9 +170,9 @@ camera.setFov(fov);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| CJSVector3D | 카메라 위치 |
+* 반환 정보
+  * CJSVector3D Type
+    * 카메라 현재 위치 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -215,13 +212,10 @@ camera.setLocation(position);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| boolean | 카메라 회전모드 |
-
 * 반환 정보
-  * true : 1인칭 시점 회전
-  * false : 3인칭 시점 회전
+  * boolean Type
+	* true : 1인칭 시점 회전
+	* false : 3인칭 시점 회전
 {% endtab %}
 
 {% tab title="Code" %}
@@ -261,9 +255,9 @@ camera.setMoveMode(false);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 시점 ~ 위치 거리\(m 단위\) |
+* 반환 정보
+  * number Type
+	* 카메라의 시점 ~ 위치 사이 거리(m 단위) 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -300,9 +294,9 @@ camera.setDistance(distance);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 제한된 최소 Tilt |
+* 반환 정보
+  * number Type
+	* 카메라의 제한된 최소 Tilt 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -339,9 +333,9 @@ camera.setLimitTilt(tilt);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 제한된 최소 고도값 |
+* 반환 정보
+  * number Type
+	* 카메라의 제한된 최소 고도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -378,9 +372,9 @@ camera.setLimitAltitude(alt);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 이동 속도 |
+* 반환 정보
+  * number Type
+	* 마우스에 의한 카메라 이동속도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -421,9 +415,9 @@ camera.setAnimationSpeed(speed);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| number | 이동 속도 |
+* 반환 정보
+  * number Type
+	* API에 의한 카메라 이동속도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -464,9 +458,9 @@ camera.setCameraSpeed(speed);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Type | Contents |
-| :--- | :--- |
-| CJSVector3D | 화면 중심의 지도 좌표값 |
+* 반환 정보
+  * CJSVector3D Type
+	* 화면 중심의 지도 좌표 반환
 {% endtab %}
 
 {% tab title="Code" %}
