@@ -502,17 +502,25 @@ let zoomLevel = camera.getMapZoomLevel();
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_speed | number | 이동 속도 |
+| \_lon | number | 카메라 위치 경도 |
+| \_lat | number | 카메라 위치 위도 |
+| \_alt | number | 카메라 위치 고도 |
+| \_angle | number | 카메라 각도 |
+| \_heading | number | 카메라 방향 각도 |
 
 * Parameter 정보
-  * 1 ~ 10 사이 값으로 설정 가능
-  * 값이 클 수록 속도가 빨라집니다.
+  * _heading
+    * 0도 : 북쪽
+    * 90도 : 동쪽
+    * 180도 : 남쪽
+    * -180도 : 남쪽
+    * -90도 : 서쪽
 {% endtab %}
 
 {% tab title="Code" %}
 ```javascript
 let camera = Module.getViewCamera();
-let zoomLevel = camera.getMapZoomLevel();
+camera.setViewAt(129.130626, 35.171523, 500.0, 45, 90);
 ```
 {% endtab %}
 {% endtabs %}
