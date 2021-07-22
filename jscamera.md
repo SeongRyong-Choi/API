@@ -51,11 +51,11 @@ camera.setTilt(tilt);
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* 0도 : 북쪽
-	* 90도 : 동쪽
-	* 180도 : 남쪽
-	* -180도 : 남쪽
-	* -90도 : 서쪽
+    * 0도 : 북쪽
+    * 90도 : 동쪽
+    * 180도 : 남쪽
+    * -180도 : 남쪽
+    * -90도 : 서쪽
 {% endtab %}
 
 {% tab title="Code" %}
@@ -214,8 +214,8 @@ camera.setLocation(position);
 {% tab title="Parameter" %}
 * 반환 정보
   * boolean Type
-	* true : 1인칭 시점 회전
-	* false : 3인칭 시점 회전
+    * true : 1인칭 시점 회전
+    * false : 3인칭 시점 회전
 {% endtab %}
 
 {% tab title="Code" %}
@@ -257,7 +257,7 @@ camera.setMoveMode(false);
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* 카메라의 시점 ~ 위치 사이 거리(m 단위) 반환
+    * 카메라의 시점 ~ 위치 사이 거리\(m 단위\) 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -296,7 +296,7 @@ camera.setDistance(distance);
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* 카메라의 제한된 최소 Tilt 반환
+    * 카메라의 제한된 최소 Tilt 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -335,7 +335,7 @@ camera.setLimitTilt(tilt);
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* 카메라의 제한된 최소 고도 반환
+    * 카메라의 제한된 최소 고도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -374,7 +374,7 @@ camera.setLimitAltitude(alt);
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* 마우스에 의한 카메라 이동속도 반환
+    * 마우스에 의한 카메라 이동속도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -417,7 +417,7 @@ camera.setAnimationSpeed(speed);
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* API에 의한 카메라 이동속도 반환
+    * API에 의한 카메라 이동속도 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -461,7 +461,7 @@ camera.setLocation(new Module.JSVector3D(129.130626, 35.171523, 1000.0));
 {% tab title="Parameter" %}
 * 반환 정보
   * CJSVector3D Type
-	* 화면 중심의 지도 좌표 반환
+    * 화면 중심의 지도 좌표 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -483,7 +483,7 @@ console.log(center.Altitude);        // 고도
 {% tab title="Parameter" %}
 * 반환 정보
   * number Type
-	* 카메라 현재 Zoom 레벨 반환
+    * 카메라 현재 Zoom 레벨 반환
 {% endtab %}
 
 {% tab title="Code" %}
@@ -494,7 +494,7 @@ let zoomLevel = camera.getMapZoomLevel();
 {% endtab %}
 {% endtabs %}
 
-## setViewAt\(\number _lon, \number _lat, \number _alt, \)
+## setViewAt\(number \_lon, number \_lat, number \_alt, number \_angle, number \_heading\)
 
 > 카메라 상세 위치 설정
 
@@ -516,3 +516,4 @@ let zoomLevel = camera.getMapZoomLevel();
 ```
 {% endtab %}
 {% endtabs %}
+
