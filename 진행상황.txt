@@ -25,8 +25,8 @@ setCameraSpeed						0
 
 
 getCenterPoint						0
-getMapZoomLevel
-setViewAt
+getMapZoomLevel						0
+setViewAt							0
 setViewMode
 setPermitUnderGround
 setLimitCamera
