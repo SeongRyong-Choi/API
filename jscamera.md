@@ -17,7 +17,7 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let tilt = camera.getTilt();
 ```
 {% endtab %}
@@ -36,7 +36,7 @@ let tilt = camera.getTilt();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let tilt = 45.0;
 camera.setTilt(tilt);
 ```
@@ -60,7 +60,7 @@ camera.setTilt(tilt);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let direct = camera.getDirect();
 ```
 {% endtab %}
@@ -79,7 +79,7 @@ let direct = camera.getDirect();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let direct = 45.0;
 camera.setDirect(direct);
 ```
@@ -99,7 +99,7 @@ camera.setDirect(direct);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let alt = camera.getAltitude();
 ```
 {% endtab %}
@@ -118,7 +118,7 @@ let alt = camera.getAltitude();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let alt = 2000.0;
 camera.setAltitude(alt);
 ```
@@ -138,7 +138,7 @@ camera.setAltitude(alt);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let fov = camera.getFov();
 ```
 {% endtab %}
@@ -157,7 +157,7 @@ let fov = camera.getFov();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let fov = 2000.0;
 camera.setFov(fov);
 ```
@@ -177,7 +177,7 @@ camera.setFov(fov);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let position = camera.getLocation();
 console.log(position.Longitude);    // 경도
 console.log(position.Latitude);        // 위도
@@ -199,7 +199,7 @@ console.log(position.Altitude);        // 고도
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let position = new Module.JSVector3D(126.92836647767662, 37.52439503321471, 1000.0);
 camera.setLocation(position);
 ```
@@ -220,7 +220,7 @@ camera.setLocation(position);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let mode = camera.getMoveMode();
 ```
 {% endtab %}
@@ -243,7 +243,7 @@ let mode = camera.getMoveMode();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 camera.setMoveMode(false);
 ```
 {% endtab %}
@@ -262,7 +262,7 @@ camera.setMoveMode(false);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let distance = camera.getDistance();
 ```
 {% endtab %}
@@ -281,7 +281,7 @@ let distance = camera.getDistance();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let distance = 2000.0;
 camera.setDistance(distance);
 ```
@@ -301,7 +301,7 @@ camera.setDistance(distance);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let tilt = camera.getLimitTilt();
 ```
 {% endtab %}
@@ -320,7 +320,7 @@ let tilt = camera.getLimitTilt();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let tilt = 30.0;
 camera.setLimitTilt(tilt);
 ```
@@ -340,7 +340,7 @@ camera.setLimitTilt(tilt);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let alt = camera.getLimitAltitude();
 ```
 {% endtab %}
@@ -359,7 +359,7 @@ let alt = camera.getLimitAltitude();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let alt = 3000.0;
 camera.setLimitAltitude(alt);
 ```
@@ -379,7 +379,7 @@ camera.setLimitAltitude(alt);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let speed = camera.getAnimationSpeed();
 ```
 {% endtab %}
@@ -402,7 +402,7 @@ let speed = camera.getAnimationSpeed();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let speed = 5.0;
 camera.setAnimationSpeed(speed);
 ```
@@ -422,7 +422,7 @@ camera.setAnimationSpeed(speed);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let speed = camera.getCameraSpeed();
 ```
 {% endtab %}
@@ -445,9 +445,10 @@ let speed = camera.getCameraSpeed();
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let speed = 5.0;
 camera.setCameraSpeed(speed);
+camera.setLocation(new Module.JSVector3D(129.130626, 35.171523, 1000.0));
 ```
 {% endtab %}
 {% endtabs %}
@@ -465,7 +466,7 @@ camera.setCameraSpeed(speed);
 
 {% tab title="Code" %}
 ```javascript
-let camera= Module.getViewCamera();
+let camera = Module.getViewCamera();
 let center = camera.getCenterPoint();
 console.log(center.Longitude);        // 경도
 console.log(center.Latitude);        // 위도
@@ -474,3 +475,44 @@ console.log(center.Altitude);        // 고도
 {% endtab %}
 {% endtabs %}
 
+## getMapZoomLevel\(\)
+
+> 카메라 현재 Zoom 레벨 반환
+
+{% tabs %}
+{% tab title="Parameter" %}
+* 반환 정보
+  * number Type
+	* 카메라 현재 Zoom 레벨 반환
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera = Module.getViewCamera();
+let zoomLevel = camera.getMapZoomLevel();
+```
+{% endtab %}
+{% endtabs %}
+
+## setViewAt\(\number _lon, \number _lat, \number _alt, \)
+
+> 카메라 상세 위치 설정
+
+{% tabs %}
+{% tab title="Parameter" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| \_speed | number | 이동 속도 |
+
+* Parameter 정보
+  * 1 ~ 10 사이 값으로 설정 가능
+  * 값이 클 수록 속도가 빨라집니다.
+{% endtab %}
+
+{% tab title="Code" %}
+```javascript
+let camera = Module.getViewCamera();
+let zoomLevel = camera.getMapZoomLevel();
+```
+{% endtab %}
+{% endtabs %}
