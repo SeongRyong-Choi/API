@@ -9,10 +9,8 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 > 카메라 Tilt 반환
 
 {% tabs %}
-{% tab title="Parameter" %}
-* 반환 정보
-  * number Type
-    * 카메라 현재 Tilt 반환
+{% tab title="Return" %}
+* Type : number
 {% endtab %}
 
 {% tab title="Code" %}
@@ -23,7 +21,7 @@ let tilt = camera.getTilt();
 {% endtab %}
 {% endtabs %}
 
-## setTilt\(number \_tilt\)
+## setTilt\(number \_value\)
 
 > 카메라 Tilt 설정
 
@@ -31,7 +29,7 @@ let tilt = camera.getTilt();
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| \_tilt | number | 설정할 Tilt값 |
+| \_value | number | 설정할 Tilt값 |
 {% endtab %}
 
 {% tab title="Code" %}
@@ -48,7 +46,7 @@ camera.setTilt(tilt);
 > 카메라 방향 각도 반환
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Return" %}
 * 반환 정보
   * number Type
     * 0도 : 북쪽
@@ -509,7 +507,7 @@ let zoomLevel = camera.getMapZoomLevel();
 | \_heading | number | 카메라 방향 각도 |
 
 * Parameter 정보
-  * _heading
+  * \_heading
     * 0도 : 북쪽
     * 90도 : 동쪽
     * 180도 : 남쪽
