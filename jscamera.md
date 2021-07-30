@@ -317,3 +317,88 @@ description: 지도 내 카메라 설정 API를 제공합니다.
   * http://sandbox.dtwincloud.com/code/main.do?id=camera_move_round_path
 {% endtab %}
 {% endtabs %}
+
+## SetCameraShakeEffect\(boolean set\) → boolean
+> 카메라 흔들림 효과를 설정합니다.
+{% tabs %}
+{% tab title="Parameter" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| set | boolean | 카메라 흔들림 효과 설정 |
+* Detail
+  * set : 카메라 흔들림 효과 설정
+    * true : 카메라 흔들림 효과 실행
+	* false : 카메라 흔들림 효과 종료
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+* Code
+  * http://sandbox.dtwincloud.com/code/main.do?id=camera_quake
+{% endtab %}
+{% endtabs %}
+
+## SetCameraShakeStrength\(number strength\) → boolean
+> 카메라 흔들림 효과 강도를 설정합니다.
+{% tabs %}
+{% tab title="Parameter" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| strength | number | 카메라 흔들림 효과 강도 설정 |
+* Detail
+  * strength : 카메라 흔들림 효과 강도
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+* Code
+  * http://sandbox.dtwincloud.com/code/main.do?id=camera_quake
+{% endtab %}
+{% endtabs %}
+
+## setPermitUnderGround\(boolean permit\)
+> 카메라가 지형 아래로 내려가는 것을 허용합니다.
+{% tabs %}
+{% tab title="Parameter" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| permit | boolean | 카메라 지형 아래 위치 허용 여부 |
+* Detail
+  * permit : 카메라 지형 아래 위치 허용 여부
+    * true : 카메라가 지형 아래로 내려가도록 허용
+	* false : 카메라가 지형 아래로 내려가도록 허용하지 않음
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+* Code
+  * Module.getViewCamera().setPermitUnderGround(true);
+{% endtab %}
+{% endtabs %}
+
+## startAutoMove\(\) → boolean
+> 카메라 자동이동을 실행합니다.
+{% tabs %}
+{% tab title="Parameter" %}
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+* Code
+  * Module.getViewCamera().startAutoMove();
+{% endtab %}
+{% endtabs %}
+
+## stopAutoMove\(\) → boolean
+> 카메라 자동이동을 종료합니다.
+{% tabs %}
+{% tab title="Parameter" %}
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+* Code
+  * Module.getViewCamera().stopAutoMove();
+{% endtab %}
+{% endtabs %}
+
+## pauseAutoMove\(\) → boolean
+> 카메라 자동이동을 일시정지합니다.
+{% tabs %}
+{% tab title="Parameter" %}
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+* Code
+  * Module.getViewCamera().pauseAutoMove();
+{% endtab %}
+{% endtabs %}
