@@ -6,3 +6,7 @@ getCameraSpeed			API move, wheel 속도
 setCameraSpeed			API move, wheel 속도
 moveOval			speed 적용 됨
 move				speed 적용 안됨
+
+
+getInputPointList	동일기능?
+getInputPoints		동일기능?

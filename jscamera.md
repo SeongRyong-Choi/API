@@ -377,7 +377,7 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
 * Code
-  * Module.getViewCamera().startAutoMove();
+  * http://sandbox.dtwincloud.com/code/main.do?id=camera_move_path
 {% endtab %}
 {% endtabs %}
 
@@ -388,7 +388,7 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
 * Code
-  * Module.getViewCamera().stopAutoMove();
+  * http://sandbox.dtwincloud.com/code/main.do?id=camera_move_path
 {% endtab %}
 {% endtabs %}
 
@@ -399,6 +399,6 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
 * Code
-  * Module.getViewCamera().pauseAutoMove();
+  * http://sandbox.dtwincloud.com/code/main.do?id=camera_move_path
 {% endtab %}
 {% endtabs %}
