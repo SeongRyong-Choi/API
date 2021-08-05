@@ -1,4 +1,4 @@
-getMovementMode		x ?	사용하지 않음
+getMovementMode		x ? 사용하지 않음
 setMovementMode		x ? 사용하지 않음
 getAnimationSpeed		마우스로 move, wheel 속도
 setAnimationSpeed		마우스로 move, wheel 속도
@@ -8,5 +8,5 @@ moveOval			speed 적용 됨
 move				speed 적용 안됨
 
 
-getInputPointList	동일기능?
+getInputPointList		동일기능?
 getInputPoints		동일기능?
