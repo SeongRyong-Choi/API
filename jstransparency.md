@@ -44,7 +44,7 @@ description: 터파기 기능 설정 API를 제공합니다.
 {% tab title="Information" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| depth | number | 터파기 깊이 (m단위)  |
+| depth | number | 터파기 깊이 (m단위) |
 * Detail
   * depth : 지면으로부터 터파기 깊이 (m단위) 
 * Code
@@ -58,7 +58,7 @@ description: 터파기 기능 설정 API를 제공합니다.
 {% tab title="Information" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| radius | number | 원형 터파기 반경  |
+| radius | number | 원형 터파기 반경 |
 * Detail
   * depth : 원형 터파기 반경
 * Code
@@ -72,10 +72,10 @@ description: 터파기 기능 설정 API를 제공합니다.
 {% tab title="Information" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| imageData | val | 이미지 Byte Array   |
-| width | number | 이미지 가로 크기  |
-| height | number | 이미지 세로 크기  |
-| type | boolean | 설정 표면 타입  |
+| imageData | val | 이미지 Byte Array |
+| width | number | 이미지 가로 크기 |
+| height | number | 이미지 세로 크기 |
+| type | boolean | 설정 표면 타입 |
 * Detail
   * type
     * false : 옆면 텍스쳐로 설정합니다.
