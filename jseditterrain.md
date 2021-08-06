@@ -51,15 +51,15 @@ description: 지형 편집을 위한 API를 제공합니다.
 {% endtab %}
 {% endtabs %}
 
-## setEditFaceTexture\(val imageData, number width, number height, boolean type\) → boolean
+## setEditFaceColor\(val imageData, number width, number height, boolean type\) → boolean
 > 지형 성절토시 바닥면, 사면 텍스쳐를 설정합니다.
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
-| imageData | val | 텍스쳐로 사용할 이미지 데이터 |
-| width | number | 이미지 넓이 |
-| height | number | 이미지 높이 |
+| imageData | val | 텍스쳐로 사용할 이미지 Byte Array  |
+| width | number | 이미지 가로 크기 |
+| height | number | 이미지 세로 크기 |
 | type | boolean | 바닥면, 사면 구분 값 |
 * Detail
   * type
