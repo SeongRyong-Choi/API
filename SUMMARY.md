@@ -7,4 +7,5 @@
 * [JSSightAnalysis](jssightanalysis.md)
 * [JSEditTerrain](jseditterrain.md)
 * [JSTransparency](jstransparency.md)
+* [SOPObject](sopobject.md)
 
