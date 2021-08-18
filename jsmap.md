@@ -4,6 +4,12 @@ description: 지도 설정 및 제어를 위한 API를 제공합니다.
 
 # JSMap
 
+Module getMap API로 생성할 수 있습니다.
+
+```javascript
+var map = Module.getMap();
+```
+
 ## setDistance\(number distance\)
 > 히트맵 반경 거리를 설정합니다.
 {% tabs %}

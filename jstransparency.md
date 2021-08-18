@@ -4,6 +4,12 @@ description: 터파기 기능 설정 API를 제공합니다.
 
 # JSTransparency
 
+Module getTransparency API로 생성할 수 있습니다.
+
+```javascript
+var transparency = Module.getTransparency();
+```
+
 ## create\([CJSVec3Array](CJSVec3Array.md) vertex\) → number
 > 입력 좌표를 받아 터파기 객체를 생성합니다.
 {% tabs %}

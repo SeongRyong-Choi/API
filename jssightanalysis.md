@@ -4,6 +4,12 @@ description: 레이어 분석을 위한 API를 제공합니다.
 
 # JSSightAnalysis
 
+Module getSightAnalysis API로 생성할 수 있습니다.
+
+```javascript
+var sightAnalysis = Module.getSightAnalysis();
+```
+
 ## GetObjectPositionsOnPath\([CJSVec3Array](CJSVec3Array.md) path, number searchBuffer, number verticalScope, [CJSLayer](CJSLayer.md) targetLayer\) → string
 > 지정된 경로에서 객체까지의 거리, 위치를 반환합니다.
 {% tabs %}

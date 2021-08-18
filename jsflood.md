@@ -4,6 +4,12 @@ description: 물판 설정 및 제어를 위한 API를 제공합니다.
 
 # JSFlood
 
+Module getFlood API로 생성할 수 있습니다.
+
+```javascript
+var flood = Module.getFlood();
+```
+
 ## active\(boolean active\)
 > 물판을 설정합니다.
 {% tabs %}

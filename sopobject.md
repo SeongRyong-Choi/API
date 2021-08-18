@@ -4,6 +4,12 @@ description: Object를 생성하는 API를 제공합니다.
 
 # SOPObject
 
+Module getAddObject API로 생성할 수 있습니다.
+
+```javascript
+var sopObject = Module.getAddObject();
+```
+
 ## setOverlabTexture\(val imageData, number width, number height\) → boolean
 > 지도에 이미지 오버랩할 이미지를 설정합니다.
 {% tabs %}

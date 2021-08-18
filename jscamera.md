@@ -4,6 +4,12 @@ description: 지도 내 카메라 설정 API를 제공합니다.
 
 # JSCamera
 
+Module getViewCamera API로 생성할 수 있습니다.
+
+```javascript
+var camera = Module.getViewCamera();
+```
+
 ## look\([JSVector3D](JSVector3D.md) from, [JSVector3D](JSVector3D.md) to\) → boolean
 > from, to 두 점을 이용해 카메라를 이동합니다.
 {% tabs %}

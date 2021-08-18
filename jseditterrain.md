@@ -2,7 +2,13 @@
 description: 지형 편집을 위한 API를 제공합니다.
 ---
 
-# JSSightAnalysis
+# JSEditTerrain
+
+Module getEditTerrain API로 생성할 수 있습니다.
+
+```javascript
+var editTerrain = Module.getEditTerrain();
+```
 
 ## clear\(\) → boolean
 > 지형 편집을 초기화 합니다.
