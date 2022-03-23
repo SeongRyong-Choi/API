@@ -10,6 +10,48 @@ Module getMap API로 생성할 수 있습니다.
 var map = Module.getMap();
 ```
 
+## changeBaseMap\(val parameter\) → string
+> 배경지도를 변경합니다.
+{% tabs %}
+{% tab title="Information" %}
+| Parameter | Type | Contents |
+| :--- | :--- | :--- |
+| parameter | val | 배경지도 설정 |
+* Detail
+  let json = {
+	// 타일구조에 대한 정보. 사용자가 따로 수정할필요 없는 영역
+	serverSetting:{
+		url: "",			// 배경지도 데이터 URL
+		tileExtent: {		// 타일 전체 영역 (좌하단, 우상단)
+			min: new Module.JSVector2D(x, y),
+			max: new Module.JSVector2D(x, y)
+		},
+		projection: "",			// 배경지도 데이터 좌표계(예. EPSG:5179)
+		tileSize: size,			// 배경지도 데이터 Tile 크기
+		resolutions : [],		// 레벨별 해상도
+		matrixIds : [],			// 타일 레벨 정의 (resolutions과 매칭)
+		serviceLevel: {			// 타일링 최소 최대 레벨
+			min: minlevel,
+			max: maxlevel
+		}
+		// vworldTileSet: false,	// 브이월드 타일구조일 경우 true		기본값: false
+		// indexOrder: true,		// 타일 인덱싱 기준점				기본값: true
+		// boxRequest: false,		// BOX단위로 요청할 경우			기본값: false
+	},
+	// 사용자가 원하는 서비스 품질을 찾기위한 영역
+	// zeroLevel, quality 설정으로 자신이 원하는 서비스 품질을 선택할 수 있습니다.
+	userSetting: {
+		zeroLevel: lod,		// 이미지 요청 LOD
+		quality: ""	// 이미지 품질 (low, middle, high) *high품질은 메모리 사용량이 기존 대비 16배 증가하므로 사용시 주의가 필요합니다.
+	}
+  };
+* Return
+  * 설정 성공 (success) 혹은 실패 (fail)
+* Code
+  * http://sandbox.dtwincloud.com/code/main.do?id=layer_wmts
+{% endtab %}
+{% endtabs %}
+
 ## setDistance\(number distance\)
 > 히트맵 반경 거리를 설정합니다.
 {% tabs %}
