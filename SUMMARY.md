@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Initial page](README.md)
+* [JSSymbol](jssymbol.md)
 * [JSCamera](jscamera.md)
 * [JSMap](jsmap.md)
 * [JSFlood](jsflood.md)
