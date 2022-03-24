@@ -41,14 +41,12 @@ var gridCellNum = colorGrid3D.SetGridPosition(
 	colNum									// 그리드 세로 셀 갯수
 );
 ```
-{% endtab %}
 
-{% tab title="Return" %}
-총 그리드 개수
-{% endtab %}
-
-{% tab title="Code" %}
-http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+* Return
+  * 총 그리드 개수
+  
+* Code
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
