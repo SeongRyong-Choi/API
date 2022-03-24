@@ -19,11 +19,13 @@ var symbol = Module.getSymbol();
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | iconName  | string | 아이콘 이름   |
+{% endtab %}
 
-* Detail&#x20;
+{% tab title="Detail" %}
 ```
 var icon = Module.getSymbol.getIcon("Icon\_name");
 ```
+
 * Return
   * 설정 성공 ([CJSIcon](CJSIcon.md)) 혹은 실패 (null)
   * 다음의 경우 API는 null 을 반환합니다.\
@@ -45,8 +47,9 @@ var icon = Module.getSymbol.getIcon("Icon\_name");
 | iconImage   | val    | 이미지 바이너리 데이터 |
 | imageWidth  | number | 이미지 Width    |
 | imageHeight | number | 이미지 Height   |
+{% endtab %}
 
-* Detail&#x20;
+{% tab title="Detail" %}
 ```
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext('2d');
@@ -54,6 +57,7 @@ var ctx = canvas.getContext('2d');
 var data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
 Module.getSymbol.insertIcon("Icon\_name", data, canvas.width, canvas.height);
 ```
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 를 반환합니다.\
@@ -73,11 +77,13 @@ Module.getSymbol.insertIcon("Icon\_name", data, canvas.width, canvas.height);
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | iconName  | string | 아이콘 이름   |
+{% endtab %}
 
-* Detail&#x20;
+{% tab title="Detail" %}
 ```
 Module.getSymbol.deleteIcon("Icon\_name");
 ```
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 를 반환합니다.\

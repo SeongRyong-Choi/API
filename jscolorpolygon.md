@@ -23,8 +23,9 @@ var colorPolygon = Module.createColorPolygon("COLOR_POLYGON");
 | height | number  | 폴리곤 높이 |
 | startColor | [CJSColor](CJSColor.md)  | 그라데이션 시작 색상 |
 | endColor | [CJSColor](CJSColor.md)  | 그라데이션 끝 색상 |
+{% endtab %}
 
-* Detail&#x20;
+{% tab title="Detail" %}
 ```
 // 폴리곤 생성
 var colorPolygon = Module.createColorPolygon("TEST_VERTICAL_POLYGON");
@@ -71,8 +72,10 @@ colorPolygon.SetVerticalPlane(coordinates, parts, -50.0, new Module.JSColor(0, 2
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | cullMode | number  | 폴리곤 컬링모드 |
+{% endtab %}
 
-* Detail
+{% tab title="Detail" %}
+* cullMode
   * 0: cw
   * 1: cw, ccw
   * 2: cw
@@ -96,8 +99,9 @@ colorPolygon.SetVerticalPlane(coordinates, parts, -50.0, new Module.JSColor(0, 2
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | parameter | val  | 그라데이션 폴리곤 설정 |
+{% endtab %}
 
-* Detail&#x20;
+{% tab title="Detail" %}
 ```
 // 폴리곤 생성
 var colorPolygon = Module.createColorPolygon("TEST_VERTICAL_POLYGON");

@@ -57,9 +57,9 @@ var gridCellNum = colorGrid3D.SetGridPosition(
 | Parameter | Type                    | Contents |
 | --------- | ----------------------- | -------- |
 | color     | [CJSColor](CJSColor.md) | 그리드 색상값  |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetGridCellDefaultColor(new Module.JSColor(255, 255, 255, 0));
@@ -85,9 +85,9 @@ colorGrid3D.SetGridCellDefaultColor(new Module.JSColor(255, 255, 255, 0));
 | rowIndex  | number                  | cell 가로 index |
 | colIndex  | number                  | cell 세로 index |
 | color     | [CJSColor](CJSColor.md) | cell 색상값      |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetGridCellColor(0, 0, new Module.JSColor(255, 255, 0, 0));
@@ -111,9 +111,9 @@ colorGrid3D.SetGridCellColor(0, 0, new Module.JSColor(255, 255, 0, 0));
 | Parameter | Type                    | Contents |
 | --------- | ----------------------- | -------- |
 | color     | [CJSColor](CJSColor.md) | 테두리 색상값  |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetGridLineColor(new Module.JSColor(150, 255, 0, 0));
@@ -139,9 +139,9 @@ colorGrid3D.SetGridLineColor(new Module.JSColor(150, 255, 0, 0));
 | rowIndex  | number                  | cell 가로 index |
 | colIndex  | number                  | cell 세로 index |
 | color     | [CJSColor](CJSColor.md) | 테두리 색상값       |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetGridCellLineColor(0, 0, new Module.JSColor(150, 255, 0, 0));
@@ -167,9 +167,9 @@ colorGrid3D.SetGridCellLineColor(0, 0, new Module.JSColor(150, 255, 0, 0));
 | rowIndex  | number | cell 가로 index |
 | colIndex  | number | cell 세로 index |
 | height    | number | cell 높이값      |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetGridCellHeight(0, 0, 30);
@@ -193,9 +193,9 @@ colorGrid3D.SetGridCellHeight(0, 0, 30);
 | Parameter | Type    | Contents                 |
 | --------- | ------- | ------------------------ |
 | drawLine  | boolean | 테두리 생성 유무 설정(초기값: false) |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetDrawLine(true);
@@ -219,9 +219,9 @@ colorGrid3D.SetDrawLine(true);
 | Parameter | Type    | Contents            |
 | --------- | ------- | ------------------- |
 | nomal     | boolean | 음영효과 설정(초기값: false) |
+{% endtab %}
 
-* Detail
-
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 colorGrid3D.SetNormal(true);
@@ -242,8 +242,9 @@ colorGrid3D.SetNormal(true);
 
 {% tabs %}
 {% tab title="Information" %}
-* Detail
+{% endtab %}
 
+{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 ...그리드 객체 옵션 설정...

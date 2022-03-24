@@ -15,13 +15,13 @@ var map = Module.getMap();
 > WMTS 서비스 레이어 생성 및 배경지도를 변경합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | parameter | val  | 배경지도 설정  |
+{% endtab %}
 
-* Detail&#x20;
-
+{% tab title="Detail" %}
 ```
 let json = { 
     // 타일구조에 대한 정보. 사용자가 따로 수정할필요 없는 영역
@@ -73,9 +73,11 @@ let json = {
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | distance  | number | 히트맵 반경   |
+{% endtab %}
 
-* Detail
-  * distance : 히트맵의 크기를 설정합니다. (최소값 1)
+{% tab title="Detail" %}
+* distance : 히트맵의 크기를 설정합니다. (최소값 1)
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -90,9 +92,11 @@ let json = {
 | Parameter   | Type   | Contents |
 | ----------- | ------ | -------- |
 | maxDistance | number | 최대 가시 거리 |
+{% endtab %}
 
-* Detail
-  * maxDistance : 히트맵 효과를 가시화할 최대 가시거리
+{% tab title="Detail" %}
+* maxDistance : 히트맵 효과를 가시화할 최대 가시거리
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -107,9 +111,11 @@ let json = {
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | weight    | number | 가중치      |
+{% endtab %}
 
-* Detail
-  * weight : 히트맵 포인트의 가중치
+{% tab title="Detail" %}
+* weight : 히트맵 포인트의 가중치
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -124,9 +130,11 @@ let json = {
 | Parameter  | Type                            | Contents      |
 | ---------- | ------------------------------- | ------------- |
 | pointArray | [CJSVec3Array](CJSVec3Array.md) | 히트맵 좌표 리스트 배열 |
+{% endtab %}
 
-* Detail
-  * pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 히트맵 좌표 리스트 배열
+{% tab title="Detail" %}
+* pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 히트맵 좌표 리스트 배열
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -137,7 +145,7 @@ let json = {
 > 히트맵을 초기화 합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -155,12 +163,14 @@ let json = {
 | start     | number                  | 안개 효과 적용 시작 거리 |
 | end       | number                  | 안개 효과 적용 종료 거리 |
 | density   | number                  | 안개 농도          |
+{% endtab %}
 
-* Detail
-  * color : [CJSColor](CJSColor.md)
-  * start : 안개 효과 적용 최소 가시거리 (최소값 1)
-  * end : 안개 효과 적용 최대 가시거리
-  * density : 안개 효과 농도 가중치 (0.0 \~ 1.0 사이 값으로 설정)
+{% tab title="Detail" %}
+* color : [CJSColor](CJSColor.md)
+* start : 안개 효과 적용 최소 가시거리 (최소값 1)
+* end : 안개 효과 적용 최대 가시거리
+* density : 안개 효과 농도 가중치 (0.0 \~ 1.0 사이 값으로 설정)
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_fog
 {% endtab %}
@@ -175,11 +185,13 @@ let json = {
 | Parameter | Type    | Contents    |
 | --------- | ------- | ----------- |
 | enable    | boolean | 안개 효과 적용 여부 |
+{% endtab %}
 
-* Detail
-  * enable
-    * false : 안개 효과를 해제합니다.
-    * true : 안개 효과를 적용합니다.
+{% tab title="Detail" %}
+* enable
+  * false : 안개 효과를 해제합니다.
+  * true : 안개 효과를 적용합니다.
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_fog
 {% endtab %}
@@ -194,9 +206,11 @@ let json = {
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | alt       | number | 고도 제한 값  |
+{% endtab %}
 
-* Detail
-  * alt : 제한된 고도값 아래에 카메라가 위치할 경우 안개 효과 적용
+{% tab title="Detail" %}
+* alt : 제한된 고도값 아래에 카메라가 위치할 경우 안개 효과 적용
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_fog
 {% endtab %}
@@ -211,12 +225,14 @@ let json = {
 | Parameter | Type   | Contents    |
 | --------- | ------ | ----------- |
 | state     | number | 적설 효과 출력 타입 |
+{% endtab %}
 
-* Detail
-  * state
-    * 0 : 적설 효과 해제
-    * 1 : 적설 표시 설정 (지형 텍스쳐 출력)
-    * 2 : 적설 표시 설정 (지형 텍스쳐 미출력)
+{% tab title="Detail" %}
+* state
+  * 0 : 적설 효과 해제
+  * 1 : 적설 표시 설정 (지형 텍스쳐 출력)
+  * 2 : 적설 표시 설정 (지형 텍스쳐 미출력)
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_snow
 {% endtab %}
@@ -231,9 +247,11 @@ let json = {
 | Parameter     | Type   | Contents |
 | ------------- | ------ | -------- |
 | snowFallLevel | number | 적설량      |
+{% endtab %}
 
-* Detail
-  * snowFallLevel : 적설량 설정 (0 \~ 100 사이값으로 설정)
+{% tab title="Detail" %}
+* snowFallLevel : 적설량 설정 (0 \~ 100 사이값으로 설정)
+
 * Return
   * 적설량
 * Code
@@ -250,9 +268,11 @@ let json = {
 | Parameter | Type   | Contents    |
 | --------- | ------ | ----------- |
 | imageURL  | string | 눈 표현 이미지 경로 |
+{% endtab %}
 
-* Detail
-  * imageURL : 눈 표현으로 사용할 이미지 경로
+{% tab title="Detail" %}
+* imageURL : 눈 표현으로 사용할 이미지 경로
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
@@ -267,7 +287,7 @@ let json = {
 > 적설 효과를 초기화 합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Code
   * Module.getMap().clearSnowfallArea();
 {% endtab %}
@@ -282,9 +302,11 @@ let json = {
 | Parameter | Type   | Contents    |
 | --------- | ------ | ----------- |
 | imageURL  | string | 비 표현 이미지 경로 |
+{% endtab %}
 
-* Detail
-  * imageURL : 비 표현으로 사용할 이미지 경로
+{% tab title="Detail" %}
+* imageURL : 비 표현으로 사용할 이미지 경로
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
@@ -305,19 +327,21 @@ let json = {
 | type      | number | 날씨 표현 타입 |
 | size      | number | 표현 강도    |
 | speed     | number | 표현 속도    |
+{% endtab %}
 
-* Detail
-  * type
-    * 0 : 눈
-    * 1 : 비
-  * size
-    * 0 : 약하게
-    * 1 : 보통
-    * 2 : 강하게
-  * speed
-    * 0 : 느리게
-    * 1 : 보통
-    * 2 : 빠르게
+{% tab title="Detail" %}
+* type
+  * 0 : 눈
+  * 1 : 비
+* size
+  * 0 : 약하게
+  * 1 : 보통
+  * 2 : 강하게
+* speed
+  * 0 : 느리게
+  * 1 : 보통
+  * 2 : 빠르게
+  
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
@@ -332,7 +356,7 @@ let json = {
 > 날씨 표현 기능을 비활성화 합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_rain
 {% endtab %}
@@ -347,10 +371,13 @@ let json = {
 | Parameter | Type    | Contents |
 | --------- | ------- | -------- |
 | set       | boolean | 건물 심플모드  |
+{% endtab %}
 
-* Detail
+{% tab title="Detail" %}
+* set
   * true : 건물 심플모드를 실행합니다.
   * false : 건물 심플모드를 해제합니다.
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
@@ -369,11 +396,14 @@ let json = {
 | Parameter | Type   | Contents  |
 | --------- | ------ | --------- |
 | effect    | number | 지형 랜더링 모드 |
+{% endtab %}
 
-* Detail
+{% tab title="Detail" %}
+* effect
   * 0 : 일반 모드
   * 10 : 경사향 모드
   * 11 : 경사도 모드
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=terrain\_rendermode
 {% endtab %}
@@ -384,7 +414,7 @@ let json = {
 > 입력된 좌표 리스트를 초기화 합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=object\_polygon\_height
 {% endtab %}
@@ -395,7 +425,7 @@ let json = {
 > 오브젝트 선택 상태를 해제합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Code
   * Module.getMap().clearSelectObj();
 {% endtab %}
@@ -406,8 +436,8 @@ let json = {
 > 입력된 좌표 리스트를 반환합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
-* Detail
+{% tab title="Information" %}
+* Return
   * [CJSVec3Array](CJSVec3Array.md) : 입력된 좌표 리스트
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis\_terrain\_edit
@@ -420,7 +450,7 @@ let json = {
 
 {% tabs %}
 {% tab title="Information" %}
-* Detail
+* Return
   * [CJSCollection](CJSCollection.md) : 입력된 좌표 리스트
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=object\_pipe
@@ -457,11 +487,14 @@ let json = {
 | to           | [CJSVector3D](CJSVector3D.md)) | 끝 점 위치     |
 | unionTerrain | boolean                        | 지형 고려할지 여부 |
 
-* Detail
-  * [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도)
-  * unionTerrain :
-    * false : 지형을 고려하지 않고 직선 거리를 반환
-    * true : 지형을 고려하여 거리를 반환
+{% endtab %}
+
+{% tab title="Detail" %}
+* [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도)
+* unionTerrain :
+  * false : 지형을 고려하지 않고 직선 거리를 반환
+  * true : 지형을 고려하여 거리를 반환
+  
 * Return
   * 두 지점 사이의 거리 반환
 * Code
@@ -479,10 +512,12 @@ let json = {
 | -------------- | -------------------------------- | ---------- |
 | lineVertex     | [CJSVec2Array](CJSVec2Array.md)) | 라인 좌표 리스트  |
 | bufferDistance | number                           | 라인으로 부터 거리 |
+{% endtab %}
 
-* Detail
-  * [CJSVec2Array](CJSVec2Array.md) : (경도, 위도)
-  * bufferDistance : 생성할 버퍼의 크기 (라인으로 부터 거리)
+{% tab title="Detail" %}
+* [CJSVec2Array](CJSVec2Array.md) : (경도, 위도)
+* bufferDistance : 생성할 버퍼의 크기 (라인으로 부터 거리)
+
 * Return
   * [CJSVec2Array](CJSVec2Array.md) : (경도, 위도)
 * Code
@@ -499,9 +534,11 @@ let json = {
 | Parameter   | Type                           | Contents  |
 | ----------- | ------------------------------ | --------- |
 | mapPosition | [CJSVector3D](CJSVector3D.md)) | 3차원 지도 좌표 |
+{% endtab %}
 
-* Detail
-  * [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도) 3차원 지도 좌표
+{% tab title="Detail" %}
+* [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도) 3차원 지도 좌표
+
 * Return
   * [CJSVector2D](CJSVector2D.md) : (x, y) 화면 좌표
 * Code
@@ -518,9 +555,11 @@ let json = {
 | Parameter      | Type                           | Contents |
 | -------------- | ------------------------------ | -------- |
 | screenPosition | [CJSVector2D](CJSVector2D.md)) | 화면 좌표    |
+{% endtab %}
 
-* Detail
-  * [CJSVector2D](CJSVector2D.md) : (x, y) 화면 좌표
+{% tab title="Detail" %}
+* [CJSVector2D](CJSVector2D.md) : (x, y) 화면 좌표
+
 * Return
   * [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도) 3차원 지도 좌표
 * Code

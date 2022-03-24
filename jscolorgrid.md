@@ -19,9 +19,9 @@ var colorGrid = Module.createColorGrid("COLOR_GRID_2D");
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | parameter | val  | 배경지도 설정  |
+{% endtab %}
 
-* Detail&#x20;
-
+{% tab title="Detail" %}
 ```
 let json = { 
     // 타일구조에 대한 정보. 사용자가 따로 수정할필요 없는 영역
@@ -55,8 +55,6 @@ let json = {
 };
 ```
 
-
-
 * Return
   * 설정 성공 (success) 혹은 실패 (fail)
 * Code
@@ -73,9 +71,11 @@ let json = {
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | distance  | number | 히트맵 반경   |
+{% endtab %}
 
-* Detail
-  * distance : 히트맵의 크기를 설정합니다. (최소값 1)
+{% tab title="Detail" %}
+distance : 히트맵의 크기를 설정합니다. (최소값 1)
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -90,9 +90,11 @@ let json = {
 | Parameter   | Type   | Contents |
 | ----------- | ------ | -------- |
 | maxDistance | number | 최대 가시 거리 |
+{% endtab %}
 
-* Detail
-  * maxDistance : 히트맵 효과를 가시화할 최대 가시거리
+{% tab title="Detail" %}
+maxDistance : 히트맵 효과를 가시화할 최대 가시거리
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -107,9 +109,11 @@ let json = {
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | weight    | number | 가중치      |
+{% endtab %}
 
-* Detail
-  * weight : 히트맵 포인트의 가중치
+{% tab title="Detail" %}
+weight : 히트맵 포인트의 가중치
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}
@@ -124,9 +128,11 @@ let json = {
 | Parameter  | Type                            | Contents      |
 | ---------- | ------------------------------- | ------------- |
 | pointArray | [CJSVec3Array](CJSVec3Array.md) | 히트맵 좌표 리스트 배열 |
+{% endtab %}
 
-* Detail
-  * pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 히트맵 좌표 리스트 배열
+{% tab title="Detail" %}
+pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 히트맵 좌표 리스트 배열
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
 {% endtab %}

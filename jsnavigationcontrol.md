@@ -55,12 +55,15 @@ var padding = Module.getNavigation().getPadding();
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | align | number  | 정렬 방식 상태  |
-* Detail
-  * type
-    * Module.JS_NAVIGATION_LT : Left/Top
-	* Module.JS_NAVIGATION_RT : Right/Top
-	* Module.JS_NAVIGATION_LB : Left/Buttom
-	* Module.JS_NAVIGATION_RB : Right/Buttom
+{% endtab %}
+
+{% tab title="Detail" %}
+* type
+  * Module.JS_NAVIGATION_LT : Left/Top
+  * Module.JS_NAVIGATION_RT : Right/Top
+  * Module.JS_NAVIGATION_LB : Left/Buttom
+  * Module.JS_NAVIGATION_RB : Right/Buttom
+	
 * Code&#x20;
 ```
 Module.getNavigation().setNaviPos(Module.JS_NAVIGATION_LT);
@@ -100,11 +103,14 @@ var naviAlign = Module.getNavigation().getNaviPos();
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | display | number  | Display 상태  |
-* Detail
-  * type
-    * Module.JS_VISIBLE_OFF : 네비게이션 숨김 설정
-	* Module.JS_VISIBLE_ON : 네비게이션 보기 설정(활성화)
-	* Module.JS_VISIBLE_AUTO : 네비게이션 보기 설정(간소화)
+{% endtab %}
+
+{% tab title="Detail" %}
+* type
+  * Module.JS_VISIBLE_OFF : 네비게이션 숨김 설정
+  * Module.JS_VISIBLE_ON : 네비게이션 보기 설정(활성화)
+  * Module.JS_VISIBLE_AUTO : 네비게이션 보기 설정(간소화)
+  
 * Code&#x20;
 ```
 Module.getNavigation().setNaviVisible(Module.JS_VISIBLE_AUTO);
