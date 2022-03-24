@@ -1,521 +1,267 @@
 ---
-description: 지도 설정 및 제어를 위한 API를 제공합니다.
+description: 3D 그리드 객체를 위한 API를 제공합니다.
 ---
 
-# JSMap
+# JSColorGrid3D
 
-Module getMap API로 생성할 수 있습니다.
+Module createColorGrid3D API로 생성할 수 있습니다.
 
 ```javascript
-var map = Module.getMap();
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 ```
 
-## changeBaseMap(val parameter) → string
+## SetGridPosition([CJSVector2D](CJSVector2D.md) leftTop, [CJSVector2D](CJSVector2D.md) rightTop, [CJSVector2D](CJSVector2D.md) rightBottom, [CJSVector2D](CJSVector2D.md) leftBottom, number altitude, number rowNum, number colNum) → number
 
-> WMTS 서비스 레이어 생성 및 배경지도를 변경합니다.
+> 3D 그리드 객체를 생성합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
-| parameter | val  | 배경지도 설정  |
+| leftTop | [CJSVector2D](CJSVector2D.md)  | 좌상단 경위도 좌표 |
+| rightTop | [CJSVector2D](CJSVector2D.md)  | 우상단 경위도 좌표 |
+| rightBottom | [CJSVector2D](CJSVector2D.md)  | 우하단 경위도 좌표 |
+| leftBottom | [CJSVector2D](CJSVector2D.md)  | 좌하단 경위도 좌표 |
+| altitude | number  | 객체 높이 |
+| rowNum | number  | 가로 그리드 개수 |
+| colNum | number  | 세로 그리드 개수 |
 
 * Detail&#x20;
 
 ```
-let json = { 
-    // 타일구조에 대한 정보. 사용자가 따로 수정할필요 없는 영역
-    serverSetting:{ 
-        url: "", // 배경지도 데이터 URL 
-        tileExtent: { 
-            // 타일 전체 영역 (좌하단, 우상단) 
-            min: new Module.JSVector2D(x, y), 
-            max: new Module.JSVector2D(x, y) 
-        }, 
-        projection: "", // 배경지도 데이터 좌표계(예. EPSG:5179) 
-        tileSize: size, // 배경지도 데이터 Tile 크기 
-        resolutions : [], // 레벨별 해상도 
-        matrixIds : [], // 타일 레벨 정의 (resolutions과 매칭) 
-        serviceLevel: { 
-            // 타일링 최소 최대 레벨 
-            min: minlevel, 
-            max: maxlevel 
-        } 
-        // vworldTileSet: false, // 브이월드 타일구조일 경우 true 기본값: false 
-        // indexOrder: true, // 타일 인덱싱 기준점 기본값: true 
-        // boxRequest: false, // BOX단위로 요청할 경우 기본값: false 
-    }, 
-    // 사용자가 원하는 서비스 품질을 찾기위한 영역 
-    // zeroLevel, quality 설정으로 자신이 원하는 서비스 품질을 선택할 수 있습니다. 
-    userSetting: { 
-        zeroLevel: lod, // 이미지 요청 LOD 
-        quality: "" // 이미지 품질 (low, middle, high) 
-         // high품질은 메모리 사용량이 기존 대비 16배 증가하므로 사용시 주의가 필요합니다. 
-    } 
-};
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+var gridCellNum = colorGrid3D.SetGridPosition(
+	new Module.JSVector2D(124.2, 39), 		// 그리드 좌상단
+	new Module.JSVector2D(130.5, 39), 		// 그리드 우상단
+	new Module.JSVector2D(130.5, 34.5), 	// 그리드 우하단
+	new Module.JSVector2D(124.2, 34.5), 	// 그리드 좌하단
+	100000.0, 								// 그리드 바닥면 고도
+	rowNum, 								// 그리드 가로 셀 갯수
+	colNum									// 그리드 세로 셀 갯수
+);
 ```
 
-
-
 * Return
-  * 설정 성공 (success) 혹은 실패 (fail)
+  * 총 그리드 개수
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=layer\_wmts
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## setDistance(number distance)
+## SetGridCellDefaultColor([CJSColor](CJSColor.md) color) → boolean
 
-> 히트맵 반경 거리를 설정합니다.
+> 초기 그리드 색상값을 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
-| distance  | number | 히트맵 반경   |
+| color  | [CJSColor](CJSColor.md) | 그리드 색상값   |
 
-* Detail
-  * distance : 히트맵의 크기를 설정합니다. (최소값 1)
+* Detail&#x20;
+
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetGridCellDefaultColor(new Module.JSColor(255, 255, 255, 0));
+```
+
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## setEffectDistance(number maxDistance)
+## SetGridCellColor(number rowIndex, number colIndex, [CJSColor](CJSColor.md) color) → boolean
 
-> 히트맵 효과가 표현되는 최대 거리를 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter   | Type   | Contents |
-| ----------- | ------ | -------- |
-| maxDistance | number | 최대 가시 거리 |
-
-* Detail
-  * maxDistance : 히트맵 효과를 가시화할 최대 가시거리
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
-{% endtab %}
-{% endtabs %}
-
-## setWeight(number weight)
-
-> 히트맵 가중치를 설정합니다.
+> 가서, 세로 Index에 해당하는 cell의 색상값을 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
-| weight    | number | 가중치      |
+| rowIndex  | number | cell 가로 index  |
+| colIndex  | number | cell 세로 index  |
+| color  | [CJSColor](CJSColor.md) | cell 색상값 |
 
-* Detail
-  * weight : 히트맵 포인트의 가중치
+* Detail&#x20;
+
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetGridCellColor(0, 0, new Module.JSColor(255, 255, 0, 0));
+```
+
+* Return
+  * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 입력된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## addHeatMaps([CJSVec3Array](CJSVec3Array.md) pointArray)
+## SetGridLineColor([CJSColor](CJSColor.md) color) → boolean
 
-> 히트맵 좌표 리스트 배열을 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter  | Type                            | Contents      |
-| ---------- | ------------------------------- | ------------- |
-| pointArray | [CJSVec3Array](CJSVec3Array.md) | 히트맵 좌표 리스트 배열 |
-
-* Detail
-  * pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 히트맵 좌표 리스트 배열
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
-{% endtab %}
-{% endtabs %}
-
-## clearHeatMap()
-
-> 히트맵을 초기화 합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=effect\_heatmap
-{% endtab %}
-{% endtabs %}
-
-## setFog([CJSColor](CJSColor.md) color, number start, number end, number density)
-
-> 안개 효과를 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type                    | Contents       |
-| --------- | ----------------------- | -------------- |
-| color     | [CJSColor](CJSColor.md) | 안개 색상          |
-| start     | number                  | 안개 효과 적용 시작 거리 |
-| end       | number                  | 안개 효과 적용 종료 거리 |
-| density   | number                  | 안개 농도          |
-
-* Detail
-  * color : [CJSColor](CJSColor.md)
-  * start : 안개 효과 적용 최소 가시거리 (최소값 1)
-  * end : 안개 효과 적용 최대 가시거리
-  * density : 안개 효과 농도 가중치 (0.0 \~ 1.0 사이 값으로 설정)
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_fog
-{% endtab %}
-{% endtabs %}
-
-## setFogEnable(boolean enable)
-
-> 안개 효과 적용 여부를 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type    | Contents    |
-| --------- | ------- | ----------- |
-| enable    | boolean | 안개 효과 적용 여부 |
-
-* Detail
-  * enable
-    * false : 안개 효과를 해제합니다.
-    * true : 안개 효과를 적용합니다.
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_fog
-{% endtab %}
-{% endtabs %}
-
-## setFogLimitAltitude(number alt)
-
-> 안개 효과 적용 고도를 제한합니다.
+> 그리드 객체 테두리 색상을 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
-| alt       | number | 고도 제한 값  |
+| color  | [CJSColor](CJSColor.md) | 테두리 색상값  |
 
-* Detail
-  * alt : 제한된 고도값 아래에 카메라가 위치할 경우 안개 효과 적용
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_fog
-{% endtab %}
-{% endtabs %}
+* Detail&#x20;
 
-## setSnowfall(number state)
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetGridLineColor(new Module.JSColor(150, 255, 0, 0));
+```
 
-> 적설 효과 출력 타입을 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type   | Contents    |
-| --------- | ------ | ----------- |
-| state     | number | 적설 효과 출력 타입 |
-
-* Detail
-  * state
-    * 0 : 적설 효과 해제
-    * 1 : 적설 표시 설정 (지형 텍스쳐 출력)
-    * 2 : 적설 표시 설정 (지형 텍스쳐 미출력)
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_snow
-{% endtab %}
-{% endtabs %}
-
-## setSnowfallLevel(number snowFallLevel) → number
-
-> 적설 효과 출력 중 적설량을 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter     | Type   | Contents |
-| ------------- | ------ | -------- |
-| snowFallLevel | number | 적설량      |
-
-* Detail
-  * snowFallLevel : 적설량 설정 (0 \~ 100 사이값으로 설정)
-* Return
-  * 적설량
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_snow
-{% endtab %}
-{% endtabs %}
-
-## setSnowImageURL(string imageURL) → boolean
-
-> 적설 효과 이미지 경로를 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type   | Contents    |
-| --------- | ------ | ----------- |
-| imageURL  | string | 눈 표현 이미지 경로 |
-
-* Detail
-  * imageURL : 눈 표현으로 사용할 이미지 경로
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
+	2\) 그리드 객체 테두리를 생성하지 않았을 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_snow
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## clearSnowfallArea()
+## SetGridCellLineColor(number rowIndex, number colIndex, [CJSColor](CJSColor.md) color) → boolean
 
-> 적설 효과를 초기화 합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-* Code
-  * Module.getMap().clearSnowfallArea();
-{% endtab %}
-{% endtabs %}
-
-## setRainImageURL(string imageURL) → boolean
-
-> 비 효과 이미지 경로를 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type   | Contents    |
-| --------- | ------ | ----------- |
-| imageURL  | string | 비 표현 이미지 경로 |
-
-* Detail
-  * imageURL : 비 표현으로 사용할 이미지 경로
-* Return
-  * 설정 성공 (true) 혹은 실패 (false)
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_rain
-{% endtab %}
-{% endtabs %}
-
-## startWeather(number type, number size, number speed) → boolean
-
-> 날씨 표현 기능을 활성화 합니다.
+> 가서, 세로 Index에 해당하는 cell의 테두리 색상을 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
-| type      | number | 날씨 표현 타입 |
-| size      | number | 표현 강도    |
-| speed     | number | 표현 속도    |
+| rowIndex  | number | cell 가로 index  |
+| colIndex  | number | cell 세로 index  |
+| color  | [CJSColor](CJSColor.md) | 테두리 색상값  |
 
-* Detail
-  * type
-    * 0 : 눈
-    * 1 : 비
-  * size
-    * 0 : 약하게
-    * 1 : 보통
-    * 2 : 강하게
-  * speed
-    * 0 : 느리게
-    * 1 : 보통
-    * 2 : 빠르게
+* Detail&#x20;
+
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetGridCellLineColor(0, 0, new Module.JSColor(150, 255, 0, 0));
+```
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
+	2\) 입력된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_rain
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## stopWeather()
+## SetGridCellHeight(number rowIndex, number colIndex, number height) → boolean
 
-> 날씨 표현 기능을 비활성화 합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=weather\_rain
-{% endtab %}
-{% endtabs %}
-
-## setSimpleMode(boolean set) → boolean
-
-> 건물 심플모드를 설정합니다.
+> 가서, 세로 Index에 해당하는 cell의 높이값을 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type    | Contents |
-| --------- | ------- | -------- |
-| set       | boolean | 건물 심플모드  |
+| Parameter | Type   | Contents |
+| --------- | ------ | -------- |
+| rowIndex  | number | cell 가로 index  |
+| colIndex  | number | cell 세로 index  |
+| height  | number | cell 높이값 |
 
-* Detail
-  * true : 건물 심플모드를 실행합니다.
-  * false : 건물 심플모드를 해제합니다.
+* Detail&#x20;
+
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetGridCellHeight(0, 0, 30);
+```
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 입력된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=layer\_building\_simplemode
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## setTerrainEffect(number effect)
+## SetDrawLine(boolean drawLine) → boolean
 
-> 지형 랜더링 효과를 설정합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type   | Contents  |
-| --------- | ------ | --------- |
-| effect    | number | 지형 랜더링 모드 |
-
-* Detail
-  * 0 : 일반 모드
-  * 10 : 경사향 모드
-  * 11 : 경사도 모드
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=terrain\_rendermode
-{% endtab %}
-{% endtabs %}
-
-## clearInputPoint()
-
-> 입력된 좌표 리스트를 초기화 합니다.
+> 그리드 객체 테두리 생성 유무를 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object\_polygon\_height
-{% endtab %}
-{% endtabs %}
+| Parameter | Type   | Contents |
+| --------- | ------ | -------- |
+| drawLine  | boolean | 테두리 생성 유무 설정(초기값: false)  |
 
-## clearSelectObj()
+* Detail&#x20;
 
-> 오브젝트 선택 상태를 해제합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-* Code
-  * Module.getMap().clearSelectObj();
-{% endtab %}
-{% endtabs %}
-
-## getInputPoints() → [CJSVec3Array](CJSVec3Array.md)
-
-> 입력된 좌표 리스트를 반환합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-* Detail
-  * [CJSVec3Array](CJSVec3Array.md) : 입력된 좌표 리스트
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=analysis\_terrain\_edit
-{% endtab %}
-{% endtabs %}
-
-## getInputPointList() → [CJSCollection](CJSCollection.md)
-
-> 입력된 좌표 리스트를 반환합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-* Detail
-  * [CJSCollection](CJSCollection.md) : 입력된 좌표 리스트
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object\_pipe
-{% endtab %}
-{% endtabs %}
-
-## getTerrHeight(number lon, number lat) → number
-
-> 해당 위치의 지형 높이값을 반환합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter | Type    | Contents |
-| --------- | ------- | -------- |
-| lon       | number) | 경도       |
-| lat       | number) | 위도       |
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetDrawLine(true);
+```
 
 * Return
-  * 지형 높이값
+  * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
-  * let height = Module.getMap().getTerrHeight(129.128265, 35.171834);
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## GetPointDistance([CJSVector3D](CJSVector3D.md) from, [CJSVector3D](CJSVector3D.md) to, boolean unionTerrain) → number
+## SetNormal(boolean nomal) → boolean
 
-> 두 지점 사이의 거리를 반환합니다.
+> 그리드 객체 음영 효과를 설정합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter    | Type                           | Contents   |
-| ------------ | ------------------------------ | ---------- |
-| from         | [CJSVector3D](CJSVector3D.md)) | 시작 점 위치    |
-| to           | [CJSVector3D](CJSVector3D.md)) | 끝 점 위치     |
-| unionTerrain | boolean                        | 지형 고려할지 여부 |
+| Parameter | Type   | Contents |
+| --------- | ------ | -------- |
+| nomal  | boolean | 음영효과 설정(초기값: false)  |
 
-* Detail
-  * [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도)
-  * unionTerrain :
-    * false : 지형을 고려하지 않고 직선 거리를 반환
-    * true : 지형을 고려하여 거리를 반환
+* Detail&#x20;
+
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+colorGrid3D.SetNormal(true);
+```
+
 * Return
-  * 두 지점 사이의 거리 반환
+  * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
-  * let distance = Module.getMap().GetPointDistance(new Module.JSVector3D(129.128265, 35.171834, 500.0), new Module.JSVector3D(129.118265, 35.161834, 500.0), false);
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
-## getLineBuffer([CJSVec2Array](CJSVec2Array.md) lineVertex, number bufferDistance) → [CJSVec2Array](CJSVec2Array.md)
+## Create() → boolean
 
-> 거리 설정값에 따라 라인 버퍼 폴리곤 좌표를 반환합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter      | Type                             | Contents   |
-| -------------- | -------------------------------- | ---------- |
-| lineVertex     | [CJSVec2Array](CJSVec2Array.md)) | 라인 좌표 리스트  |
-| bufferDistance | number                           | 라인으로 부터 거리 |
-
-* Detail
-  * [CJSVec2Array](CJSVec2Array.md) : (경도, 위도)
-  * bufferDistance : 생성할 버퍼의 크기 (라인으로 부터 거리)
-* Return
-  * [CJSVec2Array](CJSVec2Array.md) : (경도, 위도)
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object\_line\_buffering
-{% endtab %}
-{% endtabs %}
-
-## MapToScreenPointEX([CJSVector3D](CJSVector3D.md) mapPosition) → [CJSVector2D](CJSVector2D.md)
-
-> 3차원 지도 좌표로 화면 좌표를 반환합니다.
+> 설정한 옵션으로 그리드 객체를 생성합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
-| Parameter   | Type                           | Contents  |
-| ----------- | ------------------------------ | --------- |
-| mapPosition | [CJSVector3D](CJSVector3D.md)) | 3차원 지도 좌표 |
+{% tab title="Information" %}
+| Parameter | Type   | Contents |
+| --------- | ------ | -------- |
 
-* Detail
-  * [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도) 3차원 지도 좌표
+* Detail&#x20;
+
+```
+var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
+...그리드 객체 옵션 설정...
+colorGrid3D.Create();
+```
+
 * Return
-  * [CJSVector2D](CJSVector2D.md) : (x, y) 화면 좌표
+  * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
+	2\) 설정된 좌표가 없을 경우
+	3\) 설정된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=coordinate\_map\_to\_screen
-{% endtab %}
-{% endtabs %}
-
-## ScreenToMapPointEX([CJSVector2D](CJSVector2D.md) screenPosition) → [CJSVector3D](CJSVector3D.md)
-
-> 화면 좌표로 3차원 지도 좌표를 반환합니다.
-
-{% tabs %}
-{% tab title="Parameter" %}
-| Parameter      | Type                           | Contents |
-| -------------- | ------------------------------ | -------- |
-| screenPosition | [CJSVector2D](CJSVector2D.md)) | 화면 좌표    |
-
-* Detail
-  * [CJSVector2D](CJSVector2D.md) : (x, y) 화면 좌표
-* Return
-  * [CJSVector3D](CJSVector3D.md) : (경도, 위도, 고도) 3차원 지도 좌표
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=coordinate\_screen\_to\_map
+  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}

@@ -55,10 +55,10 @@ let json = {
 };
 ```
 
-
-
 * Return
   * 설정 성공 (success) 혹은 실패 (fail)
+  * 다음의 경우 API는 fail 을 반환합니다.\
+    1\) serverSetting, userSetting, url, tileExtent, max, min, projection, resolutions, matrixIds 태그 중 하나라도 없을 경우
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=layer\_wmts
 {% endtab %}
@@ -255,6 +255,8 @@ let json = {
   * imageURL : 눈 표현으로 사용할 이미지 경로
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_snow
 {% endtab %}
@@ -285,6 +287,8 @@ let json = {
   * imageURL : 비 표현으로 사용할 이미지 경로
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_rain
 {% endtab %}
@@ -316,6 +320,8 @@ let json = {
     * 2 : 빠르게
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather\_rain
 {% endtab %}
@@ -347,6 +353,8 @@ let json = {
   * false : 건물 심플모드를 해제합니다.
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
+  * 다음의 경우 API는 false 을 반환합니다.\
+    1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=layer\_building\_simplemode
 {% endtab %}
@@ -411,7 +419,7 @@ let json = {
 > 입력된 좌표 리스트를 반환합니다.
 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Detail
   * [CJSCollection](CJSCollection.md) : 입력된 좌표 리스트
 * Code

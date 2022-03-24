@@ -1,13 +1,13 @@
 ---
-description: 지도 설정 및 제어를 위한 API를 제공합니다.
+description: 2D 그리드 객체를 위한 API를 제공합니다.
 ---
 
-# JSMap
+# JSColorGrid
 
-Module getMap API로 생성할 수 있습니다.
+Module createColorGrid API로 생성할 수 있습니다.
 
 ```javascript
-var map = Module.getMap();
+var colorGrid = Module.createColorGrid("COLOR_GRID_2D");
 ```
 
 ## changeBaseMap(val parameter) → string
