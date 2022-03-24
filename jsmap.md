@@ -533,7 +533,7 @@ let json = {
 {% tab title="Parameter" %}
 | Parameter   | Type                           | Contents  |
 | ----------- | ------------------------------ | --------- |
-| mapPosition | [CJSVector3D](CJSVector3D.md)) | 3차원 지도 좌표 |
+| mapPosition | [CJSVector3D](CJSVector3D.md) | 3차원 지도 좌표 |
 {% endtab %}
 
 {% tab title="Detail" %}
@@ -554,7 +554,7 @@ let json = {
 {% tab title="Parameter" %}
 | Parameter      | Type                           | Contents |
 | -------------- | ------------------------------ | -------- |
-| screenPosition | [CJSVector2D](CJSVector2D.md)) | 화면 좌표    |
+| screenPosition | [CJSVector2D](CJSVector2D.md) | 화면 좌표    |
 {% endtab %}
 
 {% tab title="Detail" %}

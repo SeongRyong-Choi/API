@@ -20,11 +20,16 @@ var sightAnalysis = Module.getSightAnalysis();
 | searchBuffer | number | 수평 버퍼 크기 |
 | verticalScope | number | 수직 버퍼 크기 |
 | targetLayer | [CJSLayer](CJSLayer.md) | 분석할 레이어 |
-* Detail
-  * path : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 분석할 경로 배열
-  * searchBuffer : 수평 버퍼 크기. 값이 클수록 수평으로 넓은 범위의 객체를 분석합니다.
-  * verticalScope : 수직 버퍼 크기. 값이 클수록 수직으로 넓은 범위의 객체를 분석합니다.
-  * targetLayer : 분석할 객체가 속하는 레이어
+{% endtab %}
+
+{% tab title="Detail" %}
+* path : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 분석할 경로 배열
+* searchBuffer : 수평 버퍼 크기. 값이 클수록 수평으로 넓은 범위의 객체를 분석합니다.
+* verticalScope : 수직 버퍼 크기. 값이 클수록 수직으로 넓은 범위의 객체를 분석합니다.
+* targetLayer : 분석할 객체가 속하는 레이어
+
+* Return
+  * 지정된 경로 진행 중 오브젝트와 수직 방향으로 만나는 지점들의 위치 반환
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_line_path_distance
 {% endtab %}

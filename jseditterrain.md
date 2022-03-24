@@ -13,7 +13,7 @@ var editTerrain = Module.getEditTerrain();
 ## clear\(\) → boolean
 > 지형 편집을 초기화 합니다.
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_terrain_edit
 {% endtab %}
@@ -28,10 +28,13 @@ var editTerrain = Module.getEditTerrain();
 | pointlist | [CJSVec3Array](CJSVec3Array.md) | 성절토 영역 |
 | height | number | 성절토할 높이 |
 | angle | number | 성절토할 사면 각도 |
-* Detail
-  * pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 성절토 좌표 리스트 배열
-  * height : 설정한 높이로 지형을 성절토 합니다.
-  * angle : 설정한 각도로 지형 사면각을 설정합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 성절토 좌표 리스트 배열
+* height : 설정한 높이로 지형을 성절토 합니다.
+* angle : 설정한 각도로 지형 사면각을 설정합니다.
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_terrain_edit
 {% endtab %}
@@ -47,11 +50,14 @@ var editTerrain = Module.getEditTerrain();
 | max | [CJSVector2D](CJSVector2D.md) | 성절토 영역 우상단 |
 | height | number | 성절토할 높이 |
 | angle | number | 성절토할 사면 각도 |
-* Detail
-  * min : 성절토할 영역의 좌하단 좌표
-  * max : 성절토할 영역의 우상단 좌표
-  * height : 설정한 높이로 지형을 성절토 합니다.
-  * angle : 설정한 각도로 지형 사면각을 설정합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* min : 성절토할 영역의 좌하단 좌표
+* max : 성절토할 영역의 우상단 좌표
+* height : 설정한 높이로 지형을 성절토 합니다.
+* angle : 설정한 각도로 지형 사면각을 설정합니다.
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_terrain_edit
 {% endtab %}
@@ -67,10 +73,13 @@ var editTerrain = Module.getEditTerrain();
 | width | number | 이미지 가로 크기 |
 | height | number | 이미지 세로 크기 |
 | type | boolean | 바닥면, 사면 구분 값 |
-* Detail
-  * type
-    * false : 사면 텍스쳐로 설정합니다.
-    * true : 바닥면 텍스쳐로 설정합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* type
+  * false : 사면 텍스쳐로 설정합니다.
+  * true : 바닥면 텍스쳐로 설정합니다.
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_terrain_edit
 {% endtab %}

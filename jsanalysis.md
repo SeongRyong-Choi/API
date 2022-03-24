@@ -18,8 +18,11 @@ var analysis = Module.getAnalysis();
 | :--- | :--- | :--- |
 | angle | number | 평면 각도 |
 | color | [CJSColor](CJSColor.md) | 평면 색상 |
-* Detail
-  * angle : 지형으로 부터 각도
+{% endtab %}
+
+{% tab title="Detail" %}
+* angle : 지형으로 부터 각도
+
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
 * Code
@@ -34,6 +37,9 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | param | val | 시작점, 입력점, 영역, 정점 갯수, 라인 길이 |
+{% endtab %}
+
+{% tab title="Detail" %}
 * Return
   * 보간된 라인 좌표를 반환
 * Code
@@ -44,7 +50,7 @@ var analysis = Module.getAnalysis();
 ## getGridAnal\(\) → [CJSGridAnal](CJSGridAnal.md)
 > 
 {% tabs %}
-{% tab title="Parameter" %}
+{% tab title="Information" %}
 * Return
   * [CJSGridAnal](CJSGridAnal.md)
 * Code
@@ -59,8 +65,11 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | height | number | 지형 기준 높이 |
-* Detail
-  * height : 설정한 높이 이하는 지형으로 판단. 그 이상은 산으로 판단.
+{% endtab %}
+
+{% tab title="Detail" %}
+* height : 설정한 높이 이하는 지형으로 판단. 그 이상은 산으로 판단.
+
 * Return
   * 건물#차폐율#산#차폐율#지형#차폐율#하늘#차폐율
   * build#43.15#mount#17.47#terrain#35.04#sky#4.34
@@ -76,8 +85,11 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | angle | number | 퍼짐각 |
-* Detail
-  * angle : 좌우로 퍼짐각 설정
+{% endtab %}
+
+{% tab title="Detail" %}
+* angle : 좌우로 퍼짐각 설정
+
 * Return
   * 레이어명#객체키#주동길이#경도#위도,
   * facility_build#263500000000000023630202#157.677215#129.123663#35.176768, ...
@@ -93,10 +105,13 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | mode | boolean | 그림자 생성 모드 |
-* Detail
-  * mode
-      * false : 선택된 객체만 그림자 생성합니다.
-	  * true : 모든 객체의 그림자를 생성합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* mode
+  * false : 선택된 객체만 그림자 생성합니다.
+  * true : 모든 객체의 그림자를 생성합니다.
+	
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect_shadow_play
 {% endtab %}
@@ -109,10 +124,13 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | start | boolean | 시뮬레이션 설정 |
-* Detail
-  * start
-      * false : 시뮬레이션을 종료합니다.
-	  * true : 시뮬레이션을 시작합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* start
+  * false : 시뮬레이션을 종료합니다.
+  * true : 시뮬레이션을 시작합니다.
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect_shadow_play
 {% endtab %}
@@ -125,8 +143,11 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | term | number | 진행시간 간격(분 단위) |
-* Detail
-  * term : 시뮬레이션 진행 시간 간격을 설정합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* term : 시뮬레이션 진행 시간 간격을 설정합니다.
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect_shadow_play
 {% endtab %}
@@ -145,6 +166,9 @@ var analysis = Module.getAnalysis();
 | startMin | number | 시뮬레이션 시작 분 |
 | endHour | number | 시뮬레이션 종료 시간 |
 | endMin | number | 시뮬레이션 종료 분 |
+{% endtab %}
+
+{% tab title="Detail" %}
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=effect_shadow_play
 {% endtab %}
@@ -157,10 +181,13 @@ var analysis = Module.getAnalysis();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | apply | boolean | 가시권 분석 설정 |
-* Detail
-  * apply
-      * false : 가시권 분석을 종료합니다.
-	  * true : 가시권 분석을 시작합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* apply
+  * false : 가시권 분석을 종료합니다.
+  * true : 가시권 분석을 시작합니다.
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_viewshed_3d
 {% endtab %}

@@ -17,10 +17,13 @@ var flood = Module.getFlood();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | active | boolean | 물판 설정 |
-* Detail
-  * active
-      * false : 물판 효과를 해제합니다.
-	  * true : 물판 효과를 적용합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* active
+  * false : 물판 효과를 해제합니다.
+  * true : 물판 효과를 적용합니다.
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather_flood
 {% endtab %}
@@ -33,8 +36,11 @@ var flood = Module.getFlood();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | color | [CJSColor](CJSColor.md) | 물판 색상 |
-* Detail
-  * color : [CJSColor](CJSColor.md)
+{% endtab %}
+
+{% tab title="Detail" %}
+* color : [CJSColor](CJSColor.md)
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather_flood
 {% endtab %}
@@ -47,8 +53,11 @@ var flood = Module.getFlood();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | height | number | 물판 높이 |
-* Detail
-  * height : 물판 높이를 설정합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* height : 물판 높이를 설정합니다.
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather_flood
 {% endtab %}
@@ -61,8 +70,11 @@ var flood = Module.getFlood();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | altitude | number | 물판 가시거리 |
-* Detail
-  * altitude : 값이 클수록 멀리서도 물판이 보입니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* altitude : 값이 클수록 멀리서도 물판이 보입니다.
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather_flood
 {% endtab %}
@@ -75,8 +87,11 @@ var flood = Module.getFlood();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | speed | number | 물판 유속 |
-* Detail
-  * speed : 값이 클수록 유속이 빨라집니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* speed : 값이 클수록 유속이 빨라집니다.
+
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather_flood
 {% endtab %}
@@ -89,10 +104,13 @@ var flood = Module.getFlood();
 | Parameter | Type | Contents |
 | :--- | :--- | :--- |
 | visible | boolean | 물판 on/off |
-* Detail
-  * visible
-      * false : 물판 효과를 off 합니다.
-	  * true : 물판 효과를 on 합니다.
+{% endtab %}
+
+{% tab title="Detail" %}
+* visible
+  * false : 물판 효과를 off 합니다.
+  * true : 물판 효과를 on 합니다.
+  
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=weather_flood
 {% endtab %}
