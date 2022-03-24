@@ -25,8 +25,9 @@ var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 | altitude | number  | 객체 높이 |
 | rowNum | number  | 가로 그리드 개수 |
 | colNum | number  | 세로 그리드 개수 |
+{% endtab %}
 
-* Detail&#x20;
+{% tab title="Detail" %}
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -40,11 +41,14 @@ var gridCellNum = colorGrid3D.SetGridPosition(
 	colNum									// 그리드 세로 셀 갯수
 );
 ```
+{% endtab %}
 
-* Return
-  * 총 그리드 개수
-* Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+{% tab title="Return" %}
+총 그리드 개수
+{% endtab %}
+
+{% tab title="Code" %}
+http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
 {% endtab %}
 {% endtabs %}
 
