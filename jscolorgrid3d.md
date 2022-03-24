@@ -16,37 +16,35 @@ var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type | Contents |
-| --------- | ---- | -------- |
-| leftTop | [CJSVector2D](CJSVector2D.md)  | 좌상단 경위도 좌표 |
-| rightTop | [CJSVector2D](CJSVector2D.md)  | 우상단 경위도 좌표 |
-| rightBottom | [CJSVector2D](CJSVector2D.md)  | 우하단 경위도 좌표 |
-| leftBottom | [CJSVector2D](CJSVector2D.md)  | 좌하단 경위도 좌표 |
-| altitude | number  | 객체 높이 |
-| rowNum | number  | 가로 그리드 개수 |
-| colNum | number  | 세로 그리드 개수 |
+| Parameter   | Type                          | Contents   |
+| ----------- | ----------------------------- | ---------- |
+| leftTop     | [CJSVector2D](CJSVector2D.md) | 좌상단 경위도 좌표 |
+| rightTop    | [CJSVector2D](CJSVector2D.md) | 우상단 경위도 좌표 |
+| rightBottom | [CJSVector2D](CJSVector2D.md) | 우하단 경위도 좌표 |
+| leftBottom  | [CJSVector2D](CJSVector2D.md) | 좌하단 경위도 좌표 |
+| altitude    | number                        | 객체 높이      |
+| rowNum      | number                        | 가로 그리드 개수  |
+| colNum      | number                        | 세로 그리드 개수  |
 {% endtab %}
 
 {% tab title="Detail" %}
-
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 var gridCellNum = colorGrid3D.SetGridPosition(
-	new Module.JSVector2D(124.2, 39), 		// 그리드 좌상단
-	new Module.JSVector2D(130.5, 39), 		// 그리드 우상단
+	new Module.JSVector2D(124.2, 39), 	// 그리드 좌상단
+	new Module.JSVector2D(130.5, 39), 	// 그리드 우상단
 	new Module.JSVector2D(130.5, 34.5), 	// 그리드 우하단
 	new Module.JSVector2D(124.2, 34.5), 	// 그리드 좌하단
-	100000.0, 								// 그리드 바닥면 고도
-	rowNum, 								// 그리드 가로 셀 갯수
-	colNum									// 그리드 세로 셀 갯수
+	100000.0, 				// 그리드 바닥면 고도
+	rowNum, 				// 그리드 가로 셀 갯수
+	colNum					// 그리드 세로 셀 갯수
 );
 ```
 
 * Return
   * 총 그리드 개수
-  
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -56,11 +54,11 @@ var gridCellNum = colorGrid3D.SetGridPosition(
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| color  | [CJSColor](CJSColor.md) | 그리드 색상값   |
+| Parameter | Type                    | Contents |
+| --------- | ----------------------- | -------- |
+| color     | [CJSColor](CJSColor.md) | 그리드 색상값  |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -72,7 +70,7 @@ colorGrid3D.SetGridCellDefaultColor(new Module.JSColor(255, 255, 255, 0));
   * 다음의 경우 API는 false 을 반환합니다.\
     1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -82,13 +80,13 @@ colorGrid3D.SetGridCellDefaultColor(new Module.JSColor(255, 255, 255, 0));
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| rowIndex  | number | cell 가로 index  |
-| colIndex  | number | cell 세로 index  |
-| color  | [CJSColor](CJSColor.md) | cell 색상값 |
+| Parameter | Type                    | Contents      |
+| --------- | ----------------------- | ------------- |
+| rowIndex  | number                  | cell 가로 index |
+| colIndex  | number                  | cell 세로 index |
+| color     | [CJSColor](CJSColor.md) | cell 색상값      |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -100,7 +98,7 @@ colorGrid3D.SetGridCellColor(0, 0, new Module.JSColor(255, 255, 0, 0));
   * 다음의 경우 API는 false 을 반환합니다.\
     1\) 입력된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -110,11 +108,11 @@ colorGrid3D.SetGridCellColor(0, 0, new Module.JSColor(255, 255, 0, 0));
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| color  | [CJSColor](CJSColor.md) | 테두리 색상값  |
+| Parameter | Type                    | Contents |
+| --------- | ----------------------- | -------- |
+| color     | [CJSColor](CJSColor.md) | 테두리 색상값  |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -124,10 +122,9 @@ colorGrid3D.SetGridLineColor(new Module.JSColor(150, 255, 0, 0));
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
-    1\) 엔진이 정상적으로 로드되지 않았을 경우
-	2\) 그리드 객체 테두리를 생성하지 않았을 경우
+    1\) 엔진이 정상적으로 로드되지 않았을 경우 2) 그리드 객체 테두리를 생성하지 않았을 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -137,13 +134,13 @@ colorGrid3D.SetGridLineColor(new Module.JSColor(150, 255, 0, 0));
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| rowIndex  | number | cell 가로 index  |
-| colIndex  | number | cell 세로 index  |
-| color  | [CJSColor](CJSColor.md) | 테두리 색상값  |
+| Parameter | Type                    | Contents      |
+| --------- | ----------------------- | ------------- |
+| rowIndex  | number                  | cell 가로 index |
+| colIndex  | number                  | cell 세로 index |
+| color     | [CJSColor](CJSColor.md) | 테두리 색상값       |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -153,10 +150,9 @@ colorGrid3D.SetGridCellLineColor(0, 0, new Module.JSColor(150, 255, 0, 0));
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
-    1\) 엔진이 정상적으로 로드되지 않았을 경우
-	2\) 입력된 가로, 세로 index가 범위를 벗어난 경우
+    1\) 엔진이 정상적으로 로드되지 않았을 경우 2) 입력된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -166,13 +162,13 @@ colorGrid3D.SetGridCellLineColor(0, 0, new Module.JSColor(150, 255, 0, 0));
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| rowIndex  | number | cell 가로 index  |
-| colIndex  | number | cell 세로 index  |
-| height  | number | cell 높이값 |
+| Parameter | Type   | Contents      |
+| --------- | ------ | ------------- |
+| rowIndex  | number | cell 가로 index |
+| colIndex  | number | cell 세로 index |
+| height    | number | cell 높이값      |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -184,7 +180,7 @@ colorGrid3D.SetGridCellHeight(0, 0, 30);
   * 다음의 경우 API는 false 을 반환합니다.\
     1\) 입력된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -194,11 +190,11 @@ colorGrid3D.SetGridCellHeight(0, 0, 30);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| drawLine  | boolean | 테두리 생성 유무 설정(초기값: false)  |
+| Parameter | Type    | Contents                 |
+| --------- | ------- | ------------------------ |
+| drawLine  | boolean | 테두리 생성 유무 설정(초기값: false) |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -210,7 +206,7 @@ colorGrid3D.SetDrawLine(true);
   * 다음의 경우 API는 false 을 반환합니다.\
     1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -220,11 +216,11 @@ colorGrid3D.SetDrawLine(true);
 
 {% tabs %}
 {% tab title="Parameter" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-| nomal  | boolean | 음영효과 설정(초기값: false)  |
+| Parameter | Type    | Contents            |
+| --------- | ------- | ------------------- |
+| nomal     | boolean | 음영효과 설정(초기값: false) |
 
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -236,7 +232,7 @@ colorGrid3D.SetNormal(true);
   * 다음의 경우 API는 false 을 반환합니다.\
     1\) 엔진이 정상적으로 로드되지 않았을 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
 
@@ -246,10 +242,7 @@ colorGrid3D.SetNormal(true);
 
 {% tabs %}
 {% tab title="Information" %}
-| Parameter | Type   | Contents |
-| --------- | ------ | -------- |
-
-* Detail&#x20;
+* Detail
 
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
@@ -260,10 +253,8 @@ colorGrid3D.Create();
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
   * 다음의 경우 API는 false 을 반환합니다.\
-    1\) 엔진이 정상적으로 로드되지 않았을 경우
-	2\) 설정된 좌표가 없을 경우
-	3\) 설정된 가로, 세로 index가 범위를 벗어난 경우
+    1\) 엔진이 정상적으로 로드되지 않았을 경우 2) 설정된 좌표가 없을 경우 3) 설정된 가로, 세로 index가 범위를 벗어난 경우
 * Code
-  * http://sandbox.dtwincloud.com/code/main.do?id=object_grid_3d
+  * http://sandbox.dtwincloud.com/code/main.do?id=object\_grid\_3d
 {% endtab %}
 {% endtabs %}
