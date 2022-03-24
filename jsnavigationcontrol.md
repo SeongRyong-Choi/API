@@ -29,7 +29,7 @@ Module.getNavigation().setPadding(50, 50);
 {% endtab %}
 {% endtabs %}
 
-## getPadding() → [CJSVector2D] (CJSVector2D.md)
+## getPadding() → [CJSVector2D](CJSVector2D.md)
 
 > 네비게이션(나침반) Padding 값을 반환합니다.
 

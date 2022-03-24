@@ -465,8 +465,8 @@ let json = {
 {% tab title="Parameter" %}
 | Parameter | Type    | Contents |
 | --------- | ------- | -------- |
-| lon       | number) | 경도       |
-| lat       | number) | 위도       |
+| lon       | number | 경도       |
+| lat       | number | 위도       |
 
 * Return
   * 지형 높이값
@@ -483,8 +483,8 @@ let json = {
 {% tab title="Parameter" %}
 | Parameter    | Type                           | Contents   |
 | ------------ | ------------------------------ | ---------- |
-| from         | [CJSVector3D](CJSVector3D.md)) | 시작 점 위치    |
-| to           | [CJSVector3D](CJSVector3D.md)) | 끝 점 위치     |
+| from         | [CJSVector3D](CJSVector3D.md) | 시작 점 위치    |
+| to           | [CJSVector3D](CJSVector3D.md) | 끝 점 위치     |
 | unionTerrain | boolean                        | 지형 고려할지 여부 |
 
 {% endtab %}
@@ -510,7 +510,7 @@ let json = {
 {% tab title="Parameter" %}
 | Parameter      | Type                             | Contents   |
 | -------------- | -------------------------------- | ---------- |
-| lineVertex     | [CJSVec2Array](CJSVec2Array.md)) | 라인 좌표 리스트  |
+| lineVertex     | [CJSVec2Array](CJSVec2Array.md) | 라인 좌표 리스트  |
 | bufferDistance | number                           | 라인으로 부터 거리 |
 {% endtab %}
 

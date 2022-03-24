@@ -242,9 +242,6 @@ colorGrid3D.SetNormal(true);
 
 {% tabs %}
 {% tab title="Information" %}
-{% endtab %}
-
-{% tab title="Detail" %}
 ```
 var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 ...그리드 객체 옵션 설정...

@@ -15,7 +15,7 @@ var symbol = Module.getSymbol();
 > symbol 내 저장된 JSIcon 객체를 반환합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | iconName  | string | 아이콘 이름   |
@@ -40,7 +40,7 @@ var icon = Module.getSymbol.getIcon("Icon\_name");
 > symbol 내 아이콘 텍스쳐를 등록합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter   | Type   | Contents     |
 | ----------- | ------ | ------------ |
 | iconName    | string | 아이콘 이름       |
@@ -73,7 +73,7 @@ Module.getSymbol.insertIcon("Icon\_name", data, canvas.width, canvas.height);
 > symbol 내 등록된 아이콘을 삭제합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type   | Contents |
 | --------- | ------ | -------- |
 | iconName  | string | 아이콘 이름   |

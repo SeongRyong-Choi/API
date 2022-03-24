@@ -15,7 +15,7 @@ var colorPolygon = Module.createColorPolygon("COLOR_POLYGON");
 > 폴리곤 수직 벽면 형태를 정의합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | coordinates | [CJSVec3Array](CJSVec3Array.md)  | 폴리곤 정점 정보 |
@@ -68,7 +68,7 @@ colorPolygon.SetVerticalPlane(coordinates, parts, -50.0, new Module.JSColor(0, 2
 > 폴리곤 컬링모드를 설정합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | cullMode | number  | 폴리곤 컬링모드 |
@@ -95,7 +95,7 @@ colorPolygon.SetVerticalPlane(coordinates, parts, -50.0, new Module.JSColor(0, 2
 > 그라데이션 폴리곤을 정의합니다.
 
 {% tabs %}
-{% tab title="Information" %}
+{% tab title="Parameter" %}
 | Parameter | Type | Contents |
 | --------- | ---- | -------- |
 | parameter | val  | 그라데이션 폴리곤 설정 |
