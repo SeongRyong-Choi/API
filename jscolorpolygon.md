@@ -76,8 +76,7 @@ colorPolygon.SetVerticalPlane(coordinates, parts, -50.0, new Module.JSColor(0, 2
 
 {% tab title="Detail" %}
 * cullMode
-  * 0: cw
-  * 1: cw, ccw
+  * 0, 1: cw, ccw
   * 2: cw
   * 3: ccw
 

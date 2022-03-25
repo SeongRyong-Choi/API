@@ -40,7 +40,7 @@ var transparency = Module.getTransparency();
 {% endtab %}
 
 {% tab title="Detail" %}
-* vertex : ([JSVector2D](JSVector2D.md), [JSVector2D](JSVector2D.md), ...) 터파기 이동경로 좌표 리스트 배열
+* position : ([JSVector2D](JSVector2D.md), [JSVector2D](JSVector2D.md), ...) 터파기 이동경로 좌표 리스트 배열
 
 * waitframe : 터파기 위치 갱신 프레임 수
 * Return
@@ -77,7 +77,7 @@ var transparency = Module.getTransparency();
 {% endtab %}
 
 {% tab title="Detail" %}
-* depth : 원형 터파기 반경
+* radius : 원형 터파기 반경
 
 * Code
   * http://sandbox.dtwincloud.com/code/main.do?id=analysis_transparency_radius
@@ -111,6 +111,7 @@ var transparency = Module.getTransparency();
 ## startAutoMove\(\) → boolean
 > 사전에 지정된 경로를 따라 터파기 자동 이동을 시작합니다.
 {% tabs %}
+{% tab title="Information" %}
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
 * Code
@@ -121,6 +122,7 @@ var transparency = Module.getTransparency();
 ## stopAutoMove\(\) → boolean
 > 사전에 지정된 경로를 따라 터파기 자동 이동을 종료합니다.
 {% tabs %}
+{% tab title="Information" %}
 * Return
   * 설정 성공 (true) 혹은 실패 (false)
 * Code

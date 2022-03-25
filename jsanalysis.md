@@ -48,7 +48,7 @@ var analysis = Module.getAnalysis();
 {% endtabs %}
 
 ## getGridAnal\(\) → [CJSGridAnal](CJSGridAnal.md)
-> 
+> JSGridAnal 클래스를 반환합니다.
 {% tabs %}
 {% tab title="Information" %}
 * Return

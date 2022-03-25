@@ -12,7 +12,7 @@ var colorGrid3D = Module.createColorGrid3D("COLOR_GRID_3D");
 
 ## SetGridPosition([CJSVector2D](CJSVector2D.md) leftTop, [CJSVector2D](CJSVector2D.md) rightTop, [CJSVector2D](CJSVector2D.md) rightBottom, [CJSVector2D](CJSVector2D.md) leftBottom, number altitude, number rowNum, number colNum) → number
 
-> 3D 그리드 객체를 생성합니다.
+> > 4개의 점, 높이, 가로, 세로 개수를 이용하여 3D 그리드 객체를 생성합니다.
 
 {% tabs %}
 {% tab title="Parameter" %}

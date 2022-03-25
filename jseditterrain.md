@@ -31,7 +31,7 @@ var editTerrain = Module.getEditTerrain();
 {% endtab %}
 
 {% tab title="Detail" %}
-* pointArray : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 성절토 좌표 리스트 배열
+* pointlist : ([JSVector3D](JSVector3D.md), [JSVector3D](JSVector3D.md), ...) 성절토 좌표 리스트 배열
 * height : 설정한 높이로 지형을 성절토 합니다.
 * angle : 설정한 각도로 지형 사면각을 설정합니다.
 
