@@ -1,3 +1,4 @@
+JSCamera
 getMovementMode		x ? 사용하지 않음
 setMovementMode		x ? 사용하지 않음
 getAnimationSpeed		마우스로 move, wheel 속도
@@ -7,6 +8,26 @@ setCameraSpeed			API move, wheel 속도
 moveOval			speed 적용 됨
 move				speed 적용 안됨
 
-
+JSMap
 getInputPointList		동일기능?
 getInputPoints		동일기능?
+
+JSColorPolygon
+- 함수명 Set, API명 set 다름
+- Set 사용법 및 샘플소스 문의
+
+JSColorGrid
+- SetGridPositionByAltitude API명에 SetGridPositionByCellSize함수 binding 됨
+
+JSColorGrid3D
+- SetGrid: 좌상단, 우하단으로 생성
+- SetGridPosition: 좌상, 우상, 우하, 좌하로 생성
+
+JSNavigationControl
+- setControlSpeed 사용하지 않음
+- getControlSpeed 사용하지 않음
+- setZoomDelta 사용하지 않음
+
+JSProjection
+- getCoordName EPSG형태로 반환했으면
+- convertProjection EPSG형태로 입력받았으면
